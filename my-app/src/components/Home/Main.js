@@ -1,5 +1,6 @@
 import React from 'react';
 import MainSlider from "./Main_Slider";
+import {Link} from "react-router-dom";
 
 const Main = () => {
     return (
@@ -9,7 +10,7 @@ const Main = () => {
                     <h1>Lorem Ipsum</h1>
                     <h2>Lorem Ipsum Dolor <span>Ipsum</span></h2>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                    <button>Zobacz więcej</button>
+                    <Link className='Link' to='/onas'><button>Zobacz więcej</button></Link>
                 </div>
                 <MainSlider/>
             </div>

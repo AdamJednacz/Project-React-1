@@ -1,7 +1,8 @@
 import React, {useState} from 'react';
 import logo2 from '../assets/logo_napis2.png'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import {faBars,faX,faArrowRight} from "@fortawesome/free-solid-svg-icons";
+import {faBars,faX} from "@fortawesome/free-solid-svg-icons";
+import {Link} from "react-router-dom";
 
 
 
@@ -22,10 +23,11 @@ const Header = () => {
                 <div  className={`menu ${isOpen ? 'open' : ''}`}>
                     <FontAwesomeIcon className="bars x"  icon={faX} onClick={handleOpenMenu} />
                     <h1>Menu główne</h1>
-                    <p>Home </p>
-                    <p>About</p>
-                    <p>Lets go</p>
-                    <p>Contact</p>
+                    <p><Link className='Link' to='/'>Strona główna</Link></p>
+                    <p><Link className='Link' to='/onas'>O nas</Link></p>
+                    <p><Link className='Link' to='/oferta'>Oferta</Link></p>
+                    <p><Link className='Link' to='/realizacje'>Realizacje</Link></p>
+                    <p><Link className='Link' to='/kontakt'>Kontakt</Link></p>
                 </div>
                 <p className="number">
                     +48 500 100 500

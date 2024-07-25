@@ -1,8 +1,10 @@
 import React from 'react';
-import bg from '../assets/biały_marmur.jpg'
-import Header from "./Header";
+import bg from '../../assets/biały_marmur.jpg'
+
 import Main from "./Main";
-import Footer from "./Footer";
+import Header from "../Header";
+import Footer from "../Footer";
+
 const Home = () => {
     const style = {
         backgroundImage: `url(${bg})`,
@@ -14,11 +16,13 @@ const Home = () => {
 
 
     return (
+        <>
         <div className='bg' style={style}>
-        <Header/>
-        <Main/>
-
+            <Header/>
+            <Main/>
         </div>
+        <Footer/>
+        </>
     );
 };
 
