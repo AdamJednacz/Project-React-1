@@ -23,11 +23,11 @@ const Header = () => {
                 <div  className={`menu ${isOpen ? 'open' : ''}`}>
                     <FontAwesomeIcon className="bars x"  icon={faX} onClick={handleOpenMenu} />
                     <h1>Menu główne</h1>
-                    <p><Link className='Link' to='/'>Strona główna</Link></p>
-                    <p><Link className='Link' to='/onas'>O nas</Link></p>
-                    <p><Link className='Link' to='/oferta'>Oferta</Link></p>
-                    <p><Link className='Link' to='/realizacje'>Realizacje</Link></p>
-                    <p><Link className='Link' to='/kontakt'>Kontakt</Link></p>
+                    <Link className='Link' to='/'><p className='p1'>Strona główna</p></Link>
+                    <Link className='Link' to='/onas'><p>O nas</p></Link>
+                    <Link className='Link' to='/oferta'><p>Oferta</p></Link>
+                    <Link className='Link' to='/realizacje'><p>Realizacje</p></Link>
+                    <Link className='Link' to='/kontakt'> <p>Kontakt</p></Link>
                 </div>
                 <p className="number">
                     +48 500 100 500

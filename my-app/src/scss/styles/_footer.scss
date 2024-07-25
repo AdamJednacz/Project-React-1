@@ -7,7 +7,7 @@ footer {
   font-family: "Open Sans", sans-serif;
   padding: 2rem 0;
   @include desktop {
-    padding: 4rem;
+    padding: 4rem 0 3rem 0;
   }
   .container {
     flex-direction: column;
@@ -37,10 +37,14 @@ footer {
             font-weight: 600;
             font-size: 1.5rem;
           }
-          p {
+         p  {
             margin: 1.2rem 0;
             font-size: 1.1rem;
             font-weight: 500;
+            text-align: left;
+            &:hover{
+              color:#ffffff;
+            }
           }
           &:before {
             left: 30%;
@@ -51,6 +55,7 @@ footer {
         display: flex;
         flex-direction: column;
         align-items: center;
+
         h1 {
           margin: 1rem 0;
           font-weight: 600;
@@ -62,14 +67,17 @@ footer {
           margin: 0.5rem 0;
           font-size: 1.1rem;
           font-weight: 500;
+
         }
         span {
           margin-right: 0.5rem;
         }
         @include desktop {
+
           &:before {
             left: 50%;
           }
+
         }
       }
 
@@ -104,12 +112,16 @@ footer {
       flex-direction: column;
       align-items: center;
       padding-top: 0.5rem;
+
       &:before {
         content: '';
         width: 80vw;
         height: 1px;
         background-color: #4e4e50;
         margin-bottom: 1.5rem;
+        @include desktop{
+          margin-bottom: 3rem;
+        }
       }
     }
   }
@@ -119,7 +131,6 @@ footer {
   @include desktop {
   &:before {
     position: absolute;
-    left: 74%;
     content: '';
     width: 1px;
     height: 15vh;

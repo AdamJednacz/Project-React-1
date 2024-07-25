@@ -1,0 +1,173 @@
+.bg {
+  background-color: #cccccc;
+}
+
+.offer {
+  padding: 3rem 0;
+  height: auto;
+  color: #4e4e50;
+  @include desktop{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .container {
+    background: none;
+    flex-direction: column;
+    @include desktop{
+      flex-direction: row;
+
+    }
+    .offer_card {
+
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      @include desktop{
+        height: 70vh;
+        justify-content: flex-start;
+        width: 100%;
+
+      }
+      .card {
+        z-index: 1;
+        margin-bottom: 0;
+        transition: 0.7s ease-in-out;
+        @include desktop{
+          position: static;
+          max-width: 80%;
+          margin: 0;
+          align-items: center;
+          padding: 0;
+        }
+        img {
+          width: 100%;
+          box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15);
+          @include desktop{
+            width: 100%;
+            height: 30vh;
+
+          }
+        }
+
+
+        h2{
+          margin-bottom: 1rem;
+          @include desktop{
+            display: block;
+            font-size: 2.5rem;
+            margin: 1rem 0;
+          }
+        }
+
+        p {
+          margin-top: 1rem;
+          @include desktop{
+            text-align: center;
+            margin-top: 2rem;
+          }
+        }
+
+      }
+
+      ul {
+
+
+        left: 0;
+        width: 90%;
+        padding: 1.5rem 0 1rem 0;
+        background-color: #dea31b;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15);
+        transition: 0.7s ease-in-out;
+          @include desktop{
+          width: 70%;
+          z-index: 1;
+          padding: 5%;
+          }
+        li {
+
+          font-size: 0.9rem;
+          list-style: inside;
+          margin-bottom: 0.5rem;
+          margin-left: 1rem;
+          font-weight: bold;
+          @include desktop{
+            font-size: 1.1rem;
+          }
+        }
+      }
+    }
+  }
+}
+.visible{
+  top:0;
+  height: 105px;
+  position: relative;
+  @include desktop{
+    position: static;
+    height: auto;
+  }
+}
+.invisible{
+  height: 0;
+  animation: animate2 ease-in 1s;
+  top: -170px;
+  position:relative;
+  @include desktop{
+    height: auto;
+    position: static;
+    animation: none;
+  }
+}
+.grey{
+  background-color: #4e4e50;
+  border: #4e4e50 solid 1px;
+}
+.orange{
+  background-color: #dea31b;
+  border: #dea31b solid 1px;
+}
+.btn_offer_phone{
+  margin: 2rem 0;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+
+  color: #ffffff;
+  padding: 0.7rem 1rem;
+  font-weight: 500;
+
+  transition: ease-in-out 0.3s;
+  @include desktop{
+    display: none;
+  }
+}
+
+.btn_offer_desktop{
+  display: none;
+  @include desktop{
+    display: block;
+    margin: 2rem 0;
+    font-size: 1.2rem;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    background-color: #dea31b;
+    border: #dea31b solid 1px;
+    color: #ffffff;
+    padding: 0.7rem 1rem;
+    font-weight: 500;
+    transition: ease-in-out 0.3s;
+    &:hover{
+      background-color: #4e4e50;
+      border: #4e4e50 solid 1px;
+    }
+    }
+}
+
+
+@keyframes animate2 {
+  0% {
+    height: 105px;
+  }
+  100%{
+    height:0;
+  }
+}

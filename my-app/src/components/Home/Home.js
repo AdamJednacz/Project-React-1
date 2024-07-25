@@ -18,8 +18,10 @@ const Home = () => {
     return (
         <>
         <div className='bg' style={style}>
-            <Header/>
-            <Main/>
+
+                <Header/>
+                <Main/>
+
         </div>
         <Footer/>
         </>

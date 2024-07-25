@@ -12,6 +12,7 @@ header {
   align-items: center;
   width: 100%;
   padding: 1.5rem 0;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
   //background: linear-gradient(to left, #dea31b 0%, #dea31b 66%, #4e4e50 64%, #4e4e50 100%);
   @include desktop{
 
@@ -46,7 +47,7 @@ header {
     top: 0;
     left: -100%;
     transition: left 0.3s ease;
-    z-index: 1;
+    z-index: 3;
     @include desktop{
       position: static;
       height: auto;
@@ -67,11 +68,7 @@ header {
           border: 1px solid #4e4e50;
         }
       }
-      &:first-of-type{
-        @include desktop{
-          border: 1px solid #4e4e50;
-        }
-      }
+
       &:last-of-type {
         padding-bottom: 1.5rem;
         @include desktop{
@@ -79,10 +76,16 @@ header {
         }
       }
     }
+    .p1{
 
+        @include desktop{
+          border: 1px solid #4e4e50;
+
+      }
+    }
     h1 {
       position: relative;
-      bottom:15%;
+      bottom:10%;
       font-size: 2rem;
       margin: 1rem;
       @include desktop{
