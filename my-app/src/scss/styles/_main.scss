@@ -44,6 +44,7 @@ main {
       h2 {
         margin-top: 1rem;
         margin-bottom: 2rem;
+        text-align: center;
         @include desktop {
           font-size: 2rem;
         }
