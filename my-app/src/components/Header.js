@@ -16,7 +16,7 @@ const Header = () => {
 
     return (
         <header>
-            <div className="container">
+                <div className="container">
                 <img src={logo2} alt='logo'/>
                     <FontAwesomeIcon className="bars" icon={faBars} onClick={handleOpenMenu} />
                 <div  className={`menu ${isOpen ? 'open' : ''}`}>
@@ -30,7 +30,7 @@ const Header = () => {
                 <p className="number">
                     +48 500 100 500
                 </p>
-            </div>
+                </div>
         </header>
     );
 };
