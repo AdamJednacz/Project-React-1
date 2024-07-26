@@ -4,26 +4,21 @@ import bg from '../../assets/biały_marmur.jpg'
 import Main from "./Main";
 import Header from "../Header";
 import Footer from "../Footer";
-
+import Short_AboutUs from "./Short_AboutUs";
+import {style} from "../../App";
+import Icons from "./Icons";
 const Home = () => {
-    const style = {
-        backgroundImage: `url(${bg})`,
-        backgroundSize: "cover",
-        backgroundPosition:'center',
-        // Adjust the radius as needed
-        overflow: 'hidden'
-    };
 
 
     return (
         <>
-        <div className='bg' style={style}>
-
-                <Header/>
+            <Header/>
+            <div className='bg' style={style}>
                 <Main/>
-
-        </div>
-        <Footer/>
+            </div>
+            <Short_AboutUs/>
+            <Icons/>
+            <Footer/>
         </>
     );
 };

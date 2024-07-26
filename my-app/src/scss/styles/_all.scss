@@ -5,6 +5,8 @@
 @import "main_slider";
 @import "footer";
 @import "main_offer";
+@import "short_aboutus";
+@import "icons";
 .container{
   max-width: 80%;
   display: flex;
@@ -16,4 +18,26 @@
   text-decoration: none;
   color: #4e4e50;
 
+}
+.hoveredWhite:hover{
+  color: #ffffff;
+  cursor: pointer;
+
+}
+.hoveredBlue:hover{
+  cursor: pointer;
+  color:#3b5998 ;
+}
+.hoveredGreen:hover{
+  cursor: pointer;
+  color:green ;
+}
+.bg{
+  //height: 60vh;
+  //position: absolute;
+  //width: 100%;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15);
+  //@include desktop{
+  //  height: 50vh;
+  //}
 }

@@ -3,7 +3,8 @@ main {
   display: flex;
   align-items: center;
   justify-content: center;
-
+  color: #4e4e50;
+  padding: 2rem 0;
   @include desktop {
     justify-content: center;
   }
@@ -45,6 +46,7 @@ main {
         margin-top: 1rem;
         margin-bottom: 2rem;
         text-align: center ;
+
         @include desktop {
           font-size: 2rem;
           text-align: left;

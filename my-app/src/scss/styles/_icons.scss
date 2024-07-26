@@ -1,0 +1,62 @@
+.icons{
+  display: flex;
+  justify-content: center;
+  font-family: "Open Sans", sans-serif;
+  color: #4e4e50;
+  @include desktop{
+    padding: 2rem 0 4rem 0;
+  }
+  .container{
+    flex-direction: column;
+    max-width: 80%;
+    @include desktop{
+      flex-direction: row;
+      justify-content: center;
+    }
+    .box{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      background-color: #f2daa4;
+      width: 50vw;
+      padding: 2rem;
+      margin: 1rem;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15);
+      @include desktop{
+        width: 18vw;
+        padding: 3rem 0;
+        margin: 0 2rem;
+        transition: 0.7s ease-in-out;
+        &:hover{
+          scale: 1.05;
+        }
+
+    }
+      h1{
+        font-family: "Times New Roman", sans-serif;
+        font-weight: 600;
+        font-size: 1.5rem;
+        @include desktop{
+          font-size: 2.5rem;
+        }
+      }
+      .icon{
+          font-size: 3rem;
+        margin: 1.5rem 0;
+        @include desktop{
+          margin: 2.5rem 0;
+        }
+      }
+      p{
+        text-align: center;
+        span{
+          font-weight: bolder;
+        }
+        @include desktop{
+          font-size: 1.25rem;
+        };
+      }
+    }
+  }
+}

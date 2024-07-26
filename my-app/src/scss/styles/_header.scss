@@ -13,6 +13,10 @@ header {
   width: 100%;
   padding: 1.5rem 0;
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+
+  position: sticky;
+  top: 0;
+  z-index: 4;
   //background: linear-gradient(to left, #dea31b 0%, #dea31b 66%, #4e4e50 64%, #4e4e50 100%);
   @include desktop{
 
@@ -21,6 +25,7 @@ header {
 
   .container {
     width: 100%;
+    max-width: 95%;
     display: flex;
     align-items: center;
     position: relative;
@@ -30,8 +35,7 @@ header {
     width: 80%;
     @include desktop{
       width: 20%;
-      position: relative;
-      right: 150px;
+
     }
   }
 

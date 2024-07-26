@@ -1,16 +1,15 @@
-.bg {
-  background-color: #cccccc;
-}
 
 .offer {
   padding: 3rem 0;
   height: auto;
   color: #4e4e50;
+  z-index: 3;
   @include desktop{
     width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
+    height: 70vh;
   }
   .container {
     background: none;
@@ -25,15 +24,29 @@
       flex-direction: column;
       align-items: center;
       @include desktop{
-        height: 70vh;
+
         justify-content: flex-start;
         width: 100%;
-
+        transition: 0.7s scale ease-in-out;
+        &:hover .offer-list{
+          height: 110px;
+          position: relative;
+          top:0
+        }
+        &:hover{
+          scale: 1.05;
+          z-index: 2;
+        }
+        &:has(+ .offer_card:hover),&:hover + .offer_card{
+          scale: 0.95;
+        }
       }
+
+
       .card {
         z-index: 1;
         margin-bottom: 0;
-        transition: 0.7s ease-in-out;
+
         @include desktop{
           position: static;
           max-width: 80%;
@@ -81,9 +94,11 @@
         box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15);
         transition: 0.7s ease-in-out;
           @include desktop{
+
           width: 70%;
-          z-index: 1;
+          z-index: 0;
           padding: 5%;
+
           }
         li {
 
@@ -105,8 +120,8 @@
   height: 105px;
   position: relative;
   @include desktop{
-    position: static;
-    height: auto;
+    position: relative;
+    height: 105px;
   }
 }
 .invisible{
@@ -115,8 +130,8 @@
   top: -170px;
   position:relative;
   @include desktop{
-    height: auto;
-    position: static;
+    height: 0;
+    position: relative;
     animation: none;
   }
 }

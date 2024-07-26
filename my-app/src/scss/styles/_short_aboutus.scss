@@ -1,0 +1,121 @@
+.short_about_us {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Open Sans", sans-serif;
+  padding: 2em 0;
+  color: #4e4e50;
+  //background-color: #F0F0F0;
+  .container {
+    .short_about_us_container {
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      background-color: #ffffff;
+      padding: 2em 0;
+      //box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+      @include desktop{
+        flex-direction: row;
+
+      }
+      .short_about_us_img {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        @include desktop{
+          width: 55%;
+          margin-left:1rem ;
+
+        }
+        img{
+          @include desktop{
+            margin: 1rem;
+          }
+        }
+
+        .img1 {
+          width: 50%;
+          box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+          @include desktop{
+            width: 30%;
+          }
+        }
+
+        .img2 {
+          display: none;
+          @include desktop {
+            display: block;
+            width: 30%;
+          }
+        }
+
+        .img3 {
+          display: none;
+          @include desktop {
+            display: block;
+            width: 30%;
+          }
+        ;
+        }
+
+
+      }
+
+
+      .short_about_us_text {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        @include desktop{
+          width: 40%;
+        }
+        h1 {
+          font-size: 1.5rem;
+          font-family: "Times New Roman", sans-serif;
+          color: #dea31b;
+          margin: 1rem 0;
+          @include desktop{
+            font-size: 2.5rem;
+          }
+        }
+
+        p {
+          text-align: center;
+          max-width: 80%;
+          @include desktop{
+            font-size: 1.25rem;
+
+          }
+        }
+
+        button{
+          margin: 2rem 0 1rem 0;
+          box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+          background-color: #dea31b;
+          color: #ffffff;
+          padding: 0.7rem 1rem;
+          font-weight: 500;
+          border: #dea31b solid 1px;
+          transition: ease-in-out 0.3s;
+          @include desktop {
+            font-size: 1.5rem;
+            padding: 1rem 1.4rem;
+
+          }
+
+          &:hover {
+            border: #4e4e50 solid 1px;
+            background-color: #4e4e50;
+          }
+        }
+
+      }
+
+    }
+
+
+  }
+
+}
