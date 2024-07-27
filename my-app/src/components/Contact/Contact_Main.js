@@ -1,5 +1,6 @@
 import React from 'react';
-import Home_Form from "./Contact_Form";
+
+import ContactForm from "./Contact_Form";
 
 const ContactMain = () => {
     return (
@@ -17,7 +18,7 @@ const ContactMain = () => {
                         <span>Telefon: </span><a href="tel:+48793316004" className="contact_number">+48 793 316 004</a>
                         <p><span>E-mail:</span> sampleemail@gmial.com</p>
                     </div>
-                    <Home_Form/>
+                    <ContactForm/>
                 </div>
             </div>
         </section>
