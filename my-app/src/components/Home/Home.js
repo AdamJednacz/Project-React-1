@@ -8,7 +8,9 @@ import HomeAboutUs from "./Home_AboutUs";
 import {style} from "../../App";
 import Home_Icons from "./Home_Icons";
 import HomeOffer from "./Home_Offer";
-import Home_Form from "./Home_Form";
+
+
+import HomeContact from "./Home_Contact";
 const Home = () => {
 
 
@@ -21,7 +23,7 @@ const Home = () => {
             <HomeAboutUs/>
             <Home_Icons/>
             <HomeOffer/>
-            <Home_Form/>
+            <HomeContact/>
             <Footer/>
         </>
     );

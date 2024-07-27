@@ -21,7 +21,7 @@ const Footer = () => {
                 </div>
                 <div className='col2 line'>
                     <h1>Kontakt</h1>
-                    <p className='hoveredWhite' ><span><FontAwesomeIcon  icon={faPhone}/></span>+48 500 100 500</p>
+                    <p className='hoveredWhite' ><span><FontAwesomeIcon  icon={faPhone}/></span><a className=" contact_number" href="tel:+48793316004">+48 793 316 004</a></p>
                     <p className='hoveredWhite'><span><FontAwesomeIcon icon={faEnvelope}/></span>sampleemail@gmail.com</p>
                 </div>
                 <div className='col3 line'>

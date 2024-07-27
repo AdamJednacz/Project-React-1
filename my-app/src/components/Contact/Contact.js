@@ -2,14 +2,15 @@ import React from 'react';
 import Header from "../Header";
 import Footer from "../Footer";
 import {style} from "../../App";
+import Contact_Main from "./Contact_Main";
 
 const Contact = () => {
     return (
         <section>
             <Header/>
-            <div className='bg' style={style}>
 
-            </div>
+                <Contact_Main/>
+
             <Footer/>
         </section>
     );

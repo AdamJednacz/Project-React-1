@@ -1,0 +1,84 @@
+.contact_main{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem 0;
+  color: #4e4e50;
+  .container{
+    flex-direction: column;
+    @include desktop{}
+      .contact_text{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        @include desktop{
+          display: flex;
+          align-items: flex-start;
+          justify-content: center;
+          flex-direction: column;
+          width: 100%;
+        }
+        h1{
+          font-size: 1.5rem;
+          font-family: "Times New Roman",sans-serif;
+          color: #dea31b;
+          text-align: center;
+          @include desktop{
+            font-size: 2.5rem;
+          }
+        }
+        p{
+          text-align: center;
+          margin: 1rem 0;
+          line-height: 20px;
+          max-width: 80%;
+          @include desktop{
+            max-width: 40%;
+            text-align: left;
+            line-height: 24px;
+            font-size: 1.25rem;
+          }
+        }
+      }
+    .contact_info{
+      @include desktop{
+        margin: 2rem 0;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        flex-direction: row-reverse;
+        justify-content: flex-end;
+      }
+      .info{
+
+        p{
+        text-align: left;
+        margin: 1rem 0;
+          line-height: 18px;
+          @include desktop{
+            font-size: 1.25rem;
+          }
+        }
+        .contact_number{
+
+          color: #4e4e50;
+          @include desktop{
+            font-size: 1.25rem;
+          }
+        }
+        span{
+          font-weight: bold;
+          @include desktop{
+            font-size: 1.25rem;
+          }
+        }
+      }
+      form{
+
+      }
+    }
+
+  }
+
+}

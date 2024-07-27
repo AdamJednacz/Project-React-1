@@ -76,9 +76,11 @@
 
         p {
           margin-top: 1rem;
+          line-height: 20px;
           @include desktop{
             text-align: center;
             margin-top: 2rem;
+            line-height: 24px;
           }
         }
 

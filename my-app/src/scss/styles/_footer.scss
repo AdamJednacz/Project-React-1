@@ -56,7 +56,12 @@ footer {
         display: flex;
         flex-direction: column;
         align-items: center;
-
+        .contact_number{
+          color: #4e4e50;
+          &:hover{
+            color: #ffffff;
+          }
+        }
         h1 {
           margin: 1rem 0;
           font-weight: 600;
@@ -68,7 +73,9 @@ footer {
           margin: 0.5rem 0;
           font-size: 1.1rem;
           font-weight: 500;
-
+          @include desktop{
+            margin: 1rem 0;
+          }
         }
         span {
           margin-right: 0.5rem;

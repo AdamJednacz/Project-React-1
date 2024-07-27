@@ -4,7 +4,7 @@ import img1 from '../assets/img1.jpeg';
 import img2 from '../assets/img2.jpg';
 import img3 from '../assets/img5.jpg';
 
-const MainOffer = () => {
+const OfferMain = () => {
     // Stan do przechowywania ID aktualnie rozwiniętej listy
     const [expandedListId, setExpandedListId] = useState(null);
 
@@ -86,4 +86,4 @@ const MainOffer = () => {
     );
 };
 
-export default MainOffer;
+export default OfferMain;

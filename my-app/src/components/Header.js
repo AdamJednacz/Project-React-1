@@ -29,9 +29,7 @@ const Header = () => {
                     <Link className='Link' to='/realizacje'><p>Realizacje</p></Link>
                     <Link className='Link' to='/kontakt'> <p>Kontakt</p></Link>
                 </div>
-                <p className="number">
-                    +48 500 100 500
-                </p>
+                    <a className="number" href="tel:+48793316004">+48 793 316 004</a>
                 </div>
         </header>
     );

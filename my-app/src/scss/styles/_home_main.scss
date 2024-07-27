@@ -63,11 +63,13 @@ main,.home_main {
 
         padding: 0 2rem;
         text-align: center;
+        line-height: 20px;
         @include desktop {
         text-align: left;
           padding: 0;
           max-width: 70%;
           font-size: 1.25rem;
+          line-height: 24px;
         }
       }
 

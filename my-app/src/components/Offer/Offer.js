@@ -1,7 +1,7 @@
 import React from 'react';
 import Header from "../Header";
 import Footer from "../Footer";
-import MainOffer from "./MainOffer";
+import OfferMain from "./Offer_Main";
 import {style} from "../../App";
 
 
@@ -13,7 +13,7 @@ const Offer = () => {
             <Header/>
         <div className='bg' style={style}>
 
-            <MainOffer/>
+            <OfferMain/>
         </div>
             <Footer/>
         </section>
