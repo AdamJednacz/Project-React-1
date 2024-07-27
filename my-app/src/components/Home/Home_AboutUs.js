@@ -3,7 +3,7 @@ import img1 from '../assets/img4.jpeg';
 import img2 from '../assets/img5.jpg';
 import img3 from '../assets/img6.jpg';
 import {Link} from "react-router-dom";
-const ShortAboutUs = () => {
+const HomeAboutUs = () => {
     return (
         <section className="home_about_us">
             <div className="container">
@@ -26,4 +26,4 @@ const ShortAboutUs = () => {
     );
 };
 
-export default ShortAboutUs;
+export default HomeAboutUs;

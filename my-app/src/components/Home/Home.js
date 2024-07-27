@@ -4,10 +4,11 @@ import React from 'react';
 import Home_Main from "./Home_Main";
 import Header from "../Header";
 import Footer from "../Footer";
-import Short_AboutUs from "./Home_AboutUs";
+import HomeAboutUs from "./Home_AboutUs";
 import {style} from "../../App";
 import Home_Icons from "./Home_Icons";
-import Short_Offer from "./Home_Offer";
+import HomeOffer from "./Home_Offer";
+import Home_Form from "./Home_Form";
 const Home = () => {
 
 
@@ -17,9 +18,10 @@ const Home = () => {
             <div className='bg' style={style}>
                 <Home_Main/>
             </div>
-            <Short_AboutUs/>
+            <HomeAboutUs/>
             <Home_Icons/>
-            <Short_Offer/>
+            <HomeOffer/>
+            <Home_Form/>
             <Footer/>
         </>
     );

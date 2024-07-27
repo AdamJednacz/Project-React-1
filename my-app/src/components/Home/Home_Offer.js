@@ -6,7 +6,7 @@ import img4 from "../assets/blat.jpg";
 import img5 from "../assets/lastriko.jpg";
 import img6 from "../assets/schody.avif";
 
-const ShortOffer = () => {
+const HomeOffer = () => {
     const createBoxStyle = (img) => ({
         backgroundImage: `url(${img})`,
         backgroundSize: "cover",
@@ -59,4 +59,4 @@ const ShortOffer = () => {
     );
 };
 
-export default ShortOffer;
+export default HomeOffer;

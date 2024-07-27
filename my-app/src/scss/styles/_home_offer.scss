@@ -18,9 +18,10 @@
       text-align: center;
       margin-bottom: 2rem;
       max-width: 80%;
+      line-height: 18px;
       @include desktop{
         font-size: 1.25rem;
-        max-width: 40%;
+        max-width: 30%;
       }
     }
       .home_offer_container{
@@ -81,6 +82,7 @@
               color: #ffffff;
               text-decoration: underline;
               margin-top: 1rem;
+              cursor: pointer;
               @include desktop {
                 font-size: 1.25rem;
               }
