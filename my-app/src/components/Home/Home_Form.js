@@ -8,7 +8,7 @@ const HomeForm = () => {
             <form>
                 <h1>Skontaktuj się z nami!</h1>
                 <input type="text" placeholder="Imię"/>
-                <input type="email" placeholder="Nazwisko"/>
+                <input type="text" placeholder="Nazwisko"/>
                 <input type="email" placeholder="E-mail"/>
                 <input type="number" placeholder="+48 123 123 123"/>
                 <textarea rows="6" placeholder="Wiadomość..."/>
