@@ -4,6 +4,7 @@ const HomeForm = () => {
     return (
         <section className="home_form">
             <div className="container">
+
             <form>
                 <h1>Skontaktuj się z nami!</h1>
                 <input type="text" placeholder="Imię"/>
@@ -11,6 +12,7 @@ const HomeForm = () => {
                 <input type="email" placeholder="E-mail"/>
                 <input type="number" placeholder="+48 123 123 123"/>
                 <textarea rows="6" placeholder="Wiadomość..."/>
+                <button type="submit" className="form_btn">Wyślij</button>
             </form>
                 <img src={img1} alt="telefon" />
             </div>

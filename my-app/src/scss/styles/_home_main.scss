@@ -31,7 +31,7 @@ main,.home_main {
         align-items: flex-start;
       }
 
-      h1,h2 {
+      h1,h2,span {
         font-size: 1.5rem;
         color: #dea31b;
         margin-top: 2rem;
@@ -42,9 +42,9 @@ main,.home_main {
 
         }
       }
-      h2 {
+      h2,span {
         margin-top: 1rem;
-        margin-bottom: 2rem;
+
         text-align: center ;
 
         @include desktop {
@@ -55,7 +55,8 @@ main,.home_main {
 
       span {
         color: #4e4e50;
-
+        margin-bottom: 1rem;
+        margin-top: 0;
       }
 
       p {
