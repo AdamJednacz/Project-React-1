@@ -1,12 +1,17 @@
 @import "reset";
 @import "header";
 @import "home";
-@import "main";
-@import "main_slider";
+@import "home_main";
+@import "home_slider";
 @import "footer";
-@import "main_offer";
-@import "short_aboutus";
-@import "icons";
+@import "offer_main";
+@import "home_aboutus";
+@import "home_icons";
+@import "home_offer";
+body{
+  font-family: "Open Sans", sans-serif;
+
+}
 .container{
   max-width: 80%;
   display: flex;

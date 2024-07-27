@@ -1,9 +1,9 @@
 import React from 'react';
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faShield,faStar,faCalendar} from  '@fortawesome/free-solid-svg-icons';
-const Icons = () => {
+const Home_Icons = () => {
     return (
-        <section className="icons">
+        <section className="home_icons">
             <div className="container">
                 <div className="box">
                     <h1>Jakość Pracy</h1>
@@ -25,4 +25,4 @@ const Icons = () => {
     );
 };
 
-export default Icons;
+export default Home_Icons;

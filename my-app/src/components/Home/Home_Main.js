@@ -1,10 +1,10 @@
 import React from 'react';
-import MainSlider from "./Main_Slider";
+import MainSlider from "./Home_Slider";
 import {Link} from "react-router-dom";
 
-const Main = () => {
+const Home_Main = () => {
     return (
-        <main>
+        <main className="home_main">
             <div className="container" >
                 <div className="card">
                     <h1>Lorem Ipsum</h1>
@@ -18,4 +18,4 @@ const Main = () => {
     );
 };
 
-export default Main;
+export default Home_Main;

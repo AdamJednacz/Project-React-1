@@ -1,12 +1,13 @@
 import React from 'react';
-import bg from '../../assets/biały_marmur.jpg'
 
-import Main from "./Main";
+
+import Home_Main from "./Home_Main";
 import Header from "../Header";
 import Footer from "../Footer";
-import Short_AboutUs from "./Short_AboutUs";
+import Short_AboutUs from "./Home_AboutUs";
 import {style} from "../../App";
-import Icons from "./Icons";
+import Home_Icons from "./Home_Icons";
+import Short_Offer from "./Home_Offer";
 const Home = () => {
 
 
@@ -14,10 +15,11 @@ const Home = () => {
         <>
             <Header/>
             <div className='bg' style={style}>
-                <Main/>
+                <Home_Main/>
             </div>
             <Short_AboutUs/>
-            <Icons/>
+            <Home_Icons/>
+            <Short_Offer/>
             <Footer/>
         </>
     );

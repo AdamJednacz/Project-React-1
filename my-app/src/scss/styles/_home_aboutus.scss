@@ -1,4 +1,4 @@
-.short_about_us {
+.home_about_us {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -7,7 +7,7 @@
   color: #4e4e50;
   //background-color: #F0F0F0;
   .container {
-    .short_about_us_container {
+    .home_about_us_container {
       display: flex;
       align-items: center;
       flex-direction: column;
@@ -18,7 +18,7 @@
         flex-direction: row;
 
       }
-      .short_about_us_img {
+      .home_about_us_img {
         display: flex;
         align-items: center;
         justify-content: center;
@@ -35,7 +35,7 @@
         }
 
         .img1 {
-          width: 50%;
+          width: 80%;
           box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
           @include desktop{
             width: 30%;
@@ -63,7 +63,7 @@
       }
 
 
-      .short_about_us_text {
+      .home_about_us_text {
         display: flex;
         flex-direction: column;
         align-items: center;

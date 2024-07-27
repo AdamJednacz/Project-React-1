@@ -1,8 +1,8 @@
 import React, {useState} from 'react';
 
-import img1 from '../../assets/img1.jpeg';
-import img2 from '../../assets/img2.jpg';
-import img3 from '../../assets/img5.jpg';
+import img1 from '../assets/img1.jpeg';
+import img2 from '../assets/img2.jpg';
+import img3 from '../assets/img5.jpg';
 
 const MainOffer = () => {
     // Stan do przechowywania ID aktualnie rozwiniętej listy
@@ -55,9 +55,10 @@ const MainOffer = () => {
                         <button className="btn_offer_desktop">Zobacz Realizacje Renowacji</button>
                     </div>
                     <ul className={`offer-list ${expandedListId === 'renowacje' ? 'visible' : 'invisible'}`}>
+                        <li>Schody kamienne</li>
                         <li>Posadzki kamienne</li>
-                        <li>Posadzki i Schody z Lastriko</li>
-                        <li>Posadzki i Schody z Lastriko</li>
+                        <li>Posadzki z Lastriko</li>
+                        <li>Schody z Lastriko</li>
                     </ul>
                 </div>
                 <div className="offer_card">

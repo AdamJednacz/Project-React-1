@@ -7,7 +7,7 @@ import Offer from "./components/Offer/Offer";
 import AboutUs from "./components/AboutUs/AboutUs";
 import Projects from "./components/Projects/Projects";
 import Contact from "./components/Contact/Contact";
-import bg from "../src/assets/biały_marmur.jpg";
+import bg from "./components/assets/biały_marmur.jpg";
 
 function App() {
   return (

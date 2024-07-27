@@ -1,0 +1,103 @@
+.home_offer{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem 0;
+  .container{
+    flex-direction: column;
+    h1{
+      font-size: 1.5rem;
+      font-family: "Times New Roman", sans-serif;
+      color: #dea31b;
+      margin: 1rem 0;
+      @include desktop{
+        font-size: 2.5rem;
+      }
+    }
+    p{
+      text-align: center;
+      margin-bottom: 2rem;
+      max-width: 80%;
+      @include desktop{
+        font-size: 1.25rem;
+        max-width: 40%;
+      }
+    }
+      .home_offer_container{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        width: 100%;
+        @include desktop{
+          flex-direction: row;
+          width: 80%;
+        }
+        .row {
+          width: 100%;
+          @include desktop{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            width: 50%;
+            margin: 1rem;
+            &:nth-of-type(2){
+              flex-direction: column-reverse;
+            }
+          }
+          .box,.half {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            width: 100%;
+            height: 25rem;
+            margin-bottom: 2rem;
+            position: relative; /* Necessary for the overlay */
+            overflow: hidden;
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+            transition: ease-in-out 0.7s;
+            @include desktop{
+              width: 100%;
+              margin: 1rem;
+              &:hover{
+                scale: 1.05;
+              }
+            }
+
+            &::before {
+              content: "";
+              position: absolute;
+              top: 0;
+              left: 0;
+              right: 0;
+              bottom: 0;
+              background: rgba(0, 0, 0, 0.5); /* Adjust opacity as needed */
+              z-index: 0; /* Ensure the overlay is below the text */
+            }
+            .box_link {
+              z-index: 1;
+              color: #ffffff;
+              text-decoration: underline;
+              margin-top: 1rem;
+              @include desktop {
+                font-size: 1.25rem;
+              }
+            }
+            h2 {
+              text-align: center;
+              color: #ffffff;
+              font-size: 2rem;
+              z-index: 1;
+
+            }
+          }
+          .half {
+            height: 12.5rem;
+          }
+        }
+      }
+  }
+
+}
