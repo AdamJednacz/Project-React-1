@@ -34,11 +34,11 @@
           top:0
         }
         &:hover{
-          scale: 1.05;
+          scale: 1.025;
           z-index: 2;
         }
         &:has(+ .offer_card:hover),&:hover + .offer_card{
-          scale: 0.95;
+          scale: 0.975;
         }
       }
 
