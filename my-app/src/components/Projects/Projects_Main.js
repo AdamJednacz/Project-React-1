@@ -6,6 +6,7 @@ import img4 from '../assets/img4.jpeg';
 import img5 from '../assets/img5.jpg';
 import img6 from '../assets/img6.jpg';
 import {style} from "../../App";
+import Title from "../Title";
 
 
 const ProjectsMain = () => {
@@ -21,7 +22,7 @@ const ProjectsMain = () => {
         <section className="projects_main">
 
             <div className="container">
-                <h1>Nasze Realizacje</h1>
+
                 <p className="p_desktop">Kliknij aby zobaczyć zdjęcie</p>
                 <div className="projects_container">
                     <h2>Realizajce Montażu</h2>

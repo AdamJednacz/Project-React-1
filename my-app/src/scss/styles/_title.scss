@@ -1,0 +1,51 @@
+.bg {
+  padding: 2rem 0;
+  .container {
+    @include desktop{
+    justify-content: flex-start;
+    }
+
+    .card {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      background-color: #ffffff;
+      text-align: center;
+      margin: 1rem 0;
+      box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+      padding: 1rem;
+      @include desktop {
+        width: auto;
+        max-width: 40%;
+        padding: 2rem;
+        align-items: flex-start;
+      }
+
+      h1 {
+        font-size: 1.5rem;
+        color: #dea31b;
+        font-family: "Times New Roman", sans-serif;
+
+        @include desktop {
+          font-size: 2.5rem;
+          padding: 0 2rem 0 0 ;
+        }
+      }
+
+      p {
+        color: #4e4e50;
+        text-align: center;
+        line-height: 20px;
+        margin-top: 0.5rem;
+        @include desktop {
+          text-align: left;
+          padding: 0;
+          max-width: 100%;
+          font-size: 1.25rem;
+          line-height: 24px;
+        }
+      }
+    }
+  }
+}

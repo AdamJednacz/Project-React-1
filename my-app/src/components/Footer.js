@@ -22,13 +22,13 @@ const Footer = () => {
                 <div className='col2 line'>
                     <h1>Kontakt</h1>
                     <p className='hoveredWhite' ><span><FontAwesomeIcon  icon={faPhone}/></span><a className=" contact_number" href="tel:+48793316004">+48 793 316 004</a></p>
-                    <p className='hoveredWhite'><span><FontAwesomeIcon icon={faEnvelope}/></span>sampleemail@gmail.com</p>
+                    <p className='hoveredWhite'><span><FontAwesomeIcon icon={faEnvelope}/></span>sebastiankowalik_@op.pl</p>
                 </div>
                 <div className='col3 line'>
                     <h1>Social Media</h1>
                     <div className='media'>
-                        <span className='hoveredBlue'><FontAwesomeIcon icon={faFacebook} /></span>
-                        <span className='hoveredGreen'><FontAwesomeIcon icon={faWhatsapp} /></span>
+                        <a  href="https://www.facebook.com/p/Kowalik-Kamieniarstwo-100063562874398/?paipv=0&eav=AfaS-ieRF-mB41uRlunv-JZtScZZ2CHmjlEUoJwFdVR35KEyDq4sa0UdIuyDL6wovTg&_rdr" className=' icon'><FontAwesomeIcon className="hoveredBlue" icon={faFacebook} /></a>
+                        <a className="icon"><FontAwesomeIcon className='hoveredGreen' icon={faWhatsapp} /></a>
 
                     </div>
                 </div>

@@ -3,6 +3,8 @@ import Header from "../Header";
 import Footer from "../Footer";
 import OfferMain from "./Offer_Main";
 import {style} from "../../App";
+import Home_Main from "../Home/Home_Main";
+import Title from "../Title";
 
 
 const Offer = () => {
@@ -11,10 +13,8 @@ const Offer = () => {
     return (
         <section>
             <Header/>
-        <div className='bg' style={style}>
-
+            <Title h1={"Oferty"} p={"Lorem ipsum dolor"}/>
             <OfferMain/>
-        </div>
             <Footer/>
         </section>
     );
