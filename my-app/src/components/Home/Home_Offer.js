@@ -5,8 +5,10 @@ import img3 from "../assets/elewacja_kamienna.jpg";
 import img4 from "../assets/blat.jpg";
 import img5 from "../assets/lastriko.jpg";
 import img6 from "../assets/schody.avif";
+import { useNavigate } from 'react-router-dom';
 
 const HomeOffer = () => {
+    const navigate = useNavigate();
     const createBoxStyle = (img) => ({
         backgroundImage: `url(${img})`,
         backgroundSize: "cover",
@@ -14,13 +16,18 @@ const HomeOffer = () => {
         overflow: 'hidden'
     });
 
+    const handleButtonClick = () => {
+        window.scrollTo(0, 0);
+        navigate('/oferta');
+    };
+
     return (
         <section className="home_offer">
             <div className="container">
                 <h1>Co oferujemy ?</h1>
                 <p>Montaż architektury kamiennej: blaty, parapety, schody, elewacje, mała architektura. Renowacja
                     posadzek i schodów kamiennych oraz z lastriko.</p>
-
+                 <button onClick={handleButtonClick} className='home_offer_btn'>Zobacz Ofertę</button>
                 <div className="home_offer_container">
                     <div className="row">
                         <div className="box" style={createBoxStyle(img4)}>

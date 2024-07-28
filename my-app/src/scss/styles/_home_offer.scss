@@ -16,14 +16,34 @@
     }
     p{
       text-align: center;
-      margin-bottom: 3rem;
+      margin-bottom: 1rem;
       max-width: 80%;
       line-height: 20px;
       @include desktop{
         line-height: 24px;
         font-size: 1.25rem;
-        margin-bottom: 2rem;
+        margin-bottom: 0.5rem;
         max-width: 30%;
+      }
+    }
+    .home_offer_btn{
+      margin: 1rem 0 2rem 0;
+      box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+      background-color: #dea31b;
+      color: #ffffff;
+      padding: 0.7rem 1rem;
+      font-weight: 500;
+      border: #dea31b solid 1px;
+      transition: ease-in-out 0.3s;
+      @include desktop {
+        font-size: 1.5rem;
+        padding: 1rem 1.4rem;
+        margin:2rem 0 1rem;
+      }
+
+      &:hover {
+        border: #4e4e50 solid 1px;
+        background-color: #4e4e50;
       }
     }
       .home_offer_container{

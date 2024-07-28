@@ -48,7 +48,7 @@ header {
     flex-direction: column;
     position: fixed;
     top: 0;
-    left: -100%;
+    left: -120%;
     transition: left 0.3s ease;
     z-index: 3;
     @include desktop{
