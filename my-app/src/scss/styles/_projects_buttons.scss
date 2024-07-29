@@ -1,0 +1,110 @@
+.buttons {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: column;
+  @include desktop{
+    flex-direction: row;
+  }
+  .custom-select {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    padding: 0.825rem 1rem;
+    cursor: pointer;
+    background-color: #dea31b;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    margin: 1rem;
+    min-width: 5rem;
+    @include desktop{
+      padding: 1.188rem 1rem;
+      &:hover{
+        background-color: #4e4e50;
+      }
+    }
+    .select-trigger {
+      display: flex;
+      align-items: center;
+      font-size: 1rem;
+
+
+      color: #ffffff;
+
+      white-space: nowrap; // Prevent text wrapping
+      transition: transform 0.3s ease-in-out; // Smooth transition for icon rotation
+
+      @include desktop {
+        font-size: 1.5rem;
+
+      }
+
+      .icon {
+        margin-left: 0.25rem;
+        transition: transform 0.3s ease-in-out; // Smooth transition for icon rotation
+        @include desktop{
+          margin-left: 0.5rem;
+        }
+      }
+    }
+
+    .options {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      width: 100%;
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.5s ease-in-out;
+      background-color: #dea31b;
+      z-index: 1;
+      color: #ffffff;
+
+      .option {
+        padding: 10px;
+        cursor: pointer;
+        border-top: 1px solid #ffffff;
+        border-left: 1px solid #ffffff;
+        border-right: 1px solid #ffffff;
+
+        &:hover {
+          background-color: #4e4e50;
+        }
+        &:last-of-type{
+          border-bottom: 1px solid #ffffff;
+        }
+      }
+    }
+
+    &.open {
+      .options {
+        max-height: 500px; // Adjust based on the number of options
+      }
+
+      .select-trigger .icon {
+        transform: rotate(180deg); // Rotate the icon 180 degrees when open
+      }
+    }
+  }
+
+  .projects_btn {
+    margin: 1rem;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    background-color: #dea31b;
+    color: #ffffff;
+    padding: 0.7rem 1rem;
+    font-weight: 500;
+    border: #dea31b solid 1px;
+    transition: ease-in-out 0.3s;
+
+    @include desktop {
+      font-size: 1.5rem;
+      padding: 1rem 1.4rem;
+      &:hover{
+        background-color: #4e4e50;
+        border: #4e4e50 solid 1px;
+      }
+    }
+
+  }
+}

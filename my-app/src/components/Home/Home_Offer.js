@@ -1,10 +1,10 @@
 import React from 'react';
 import img1 from "../assets/parapet.jpg";
-import img2 from "../assets/mała_architektura.jpg";
-import img3 from "../assets/elewacja_kamienna.jpg";
-import img4 from "../assets/blat.jpg";
-import img5 from "../assets/lastriko.jpg";
-import img6 from "../assets/schody.avif";
+import img2 from "../assets/m_architektura.jpg";
+import img3 from "../assets/elewacje.jpg";
+import img4 from "../assets/blaty.jpg";
+import img5 from "../assets/renowacje.jpg";
+import img6 from "../assets/schody.jpg";
 import { useNavigate } from 'react-router-dom';
 
 const HomeOffer = () => {
@@ -46,8 +46,8 @@ const HomeOffer = () => {
 
                     </div>
                     <div className="row">
-                        <div className="box" style={createBoxStyle(img3)}>
-                            <h2>Elewacje</h2>
+                        <div className="box" style={createBoxStyle(img5)}>
+                            <h2>Renowacje</h2>
                             <a className="box_link">Zobacz więcej</a>
                         </div>
 
@@ -55,8 +55,8 @@ const HomeOffer = () => {
                             <h2>Mała architektura</h2>
                             <a className="box_link">Zobacz więcej</a>
                         </div>
-                        <div className="half" style={createBoxStyle(img5)}>
-                            <h2>Renowacje</h2>
+                        <div className="half" style={createBoxStyle(img3)}>
+                            <h2>Elewacje</h2>
                             <a className="box_link">Zobacz więcej</a>
                         </div>
                     </div>

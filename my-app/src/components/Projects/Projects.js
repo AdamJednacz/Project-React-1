@@ -8,7 +8,7 @@ const Projects = () => {
     return (
         <section>
             <Header/>
-            <Title h1={"Nasze Realizacje"} p={"Lorem ipsum dolor"}/>
+            <Title h1={"Nasze Realizacje"} p={"Drodzy Państwo tutaj znajdziecie zdjęcia z naszych realizacji"}/>
             <ProjectsMain/>
             <Footer/>
         </section>

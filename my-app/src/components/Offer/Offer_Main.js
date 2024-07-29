@@ -21,7 +21,7 @@ const OfferMain = () => {
 
                         <img src={img1} alt='img'/>
 
-                        <h2 className>Montaż</h2>
+                        <h2 className>Montaż Kamień</h2>
                         <p>Lorem ipsum dolor sit amet,
                             consectetur adipiscing elit
                             Lorem ipsum dolor sit amet,</p>
@@ -33,11 +33,11 @@ const OfferMain = () => {
 
                     </div>
                     <ul className={`offer-list ${expandedListId === 'montaz' ? 'visible' : 'invisible'}`}>
+                        <li>Montaż Blatów</li>
+                        <li>Montaż Elewacji</li>
+                        <li>Montaż Małej Architektury</li>
                         <li>Montaż Parapetów</li>
                         <li>Montaż Schodów</li>
-                        <li>Montaż Blatów</li>
-                        <li>Elewacje</li>
-                        <li>Mała architektura</li>
                     </ul>
                 </div>
                 <div className="offer_card">
@@ -55,17 +55,17 @@ const OfferMain = () => {
                         <button className="btn_offer_desktop">Zobacz Realizacje Renowacji</button>
                     </div>
                     <ul className={`offer-list ${expandedListId === 'renowacje' ? 'visible' : 'invisible'}`}>
-                        <li>Schody kamienne</li>
-                        <li>Posadzki kamienne</li>
                         <li>Posadzki z Lastriko</li>
                         <li>Schody z Lastriko</li>
+                        <li>Schody kamienne</li>
+                        <li>Posadzki kamienne</li>
                     </ul>
                 </div>
                 <div className="offer_card">
                     <div className="card">
 
                         <img src={img3} alt='img'/>
-                        <h2>Inne</h2>
+                        <h2>Montaż Inne</h2>
                         <p>Lorem ipsum dolor sit amet,
                             consectetur adipiscing elit
                             Lorem ipsum dolor sit amet,</p>
@@ -76,9 +76,9 @@ const OfferMain = () => {
                         <button className="btn_offer_desktop">Zobacz Realizacje</button>
                     </div>
                     <ul className={`offer-list ${expandedListId === 'inne' ? 'visible' : 'invisible'}`}>
-                        <li>Montaż spieków wieloformatowych</li>
-                        <li>Montaż gresów</li>
                         <li>Montaż betonu architektonicznego</li>
+                        <li>Montaż gresów</li>
+                        <li>Montaż spieków wieloformatowych</li>
                     </ul>
                 </div>
             </div>
