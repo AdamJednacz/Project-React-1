@@ -1,8 +1,14 @@
 import React, { useState } from 'react';
-import ProjectsSelect1 from "./Projects_Select_1";
-import ProjectsSelect2 from "./Projects_Select_2";
+import ProjectsSelect1 from './Projects_Select_1';
+import ProjectsSelect2 from './Projects_Select_2';
 
-const Projects_Buttons = () => {
+const Projects_Buttons = ({
+                              onOptionSelect1,
+                              onOptionSelect2,
+                              onRenovationClick,
+                              selectedOption1,
+                              selectedOption2
+                          }) => {
     const [openSelect, setOpenSelect] = useState(null);
 
     const handleToggleSelect = (selectNumber) => {
@@ -13,11 +19,23 @@ const Projects_Buttons = () => {
         }
     };
 
+
+
     return (
         <div className="buttons">
-            <ProjectsSelect1 isOpen={openSelect === 1} toggleDropdown={() => handleToggleSelect(1)} />
-            <button className="projects_btn">Renowacje</button>
-            <ProjectsSelect2 isOpen={openSelect === 2} toggleDropdown={() => handleToggleSelect(2)} />
+            <ProjectsSelect1
+                isOpen={openSelect === 1}
+                toggleDropdown={() => handleToggleSelect(1)}
+                onOptionSelect={onOptionSelect1}
+                selectedOption={selectedOption1}
+            />
+            <button className="projects_btn" onClick={onRenovationClick}>Renowacje</button>
+            <ProjectsSelect2
+                isOpen={openSelect === 2}
+                toggleDropdown={() => handleToggleSelect(2)}
+                onOptionSelect={onOptionSelect2}
+                selectedOption={selectedOption2}
+            />
         </div>
     );
 };

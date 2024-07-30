@@ -5,7 +5,7 @@
   font-family: "Open Sans", sans-serif;
   padding: 2em 0;
   color: #4e4e50;
-  //background-color: #F0F0F0;
+
   .container {
     .home_about_us_container {
       display: flex;
@@ -13,56 +13,20 @@
       flex-direction: column;
       background-color: #ffffff;
       padding: 2em 0;
-      //box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+      justify-content: space-around;
+      width: 80%;
       @include desktop{
         flex-direction: row;
-
       }
-      .home_about_us_img {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        width: 100%;
-        @include desktop{
-          width: 55%;
-          margin-left:1rem ;
 
-        }
         img{
           box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+          width: 80%;
           @include desktop{
             margin: 1rem;
+            width: 30rem;
           }
         }
-
-        .img1 {
-          width: 80%;
-
-          @include desktop{
-            width: 30%;
-          }
-        }
-
-        .img2 {
-          display: none;
-          @include desktop {
-            display: block;
-            width: 30%;
-          }
-        }
-
-        .img3 {
-          display: none;
-          @include desktop {
-            display: block;
-            width: 30%;
-          }
-        ;
-        }
-
-
-      }
-
 
       .home_about_us_text {
         display: flex;

@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import logo2 from './assets/logo_napis2.png';
+
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars, faX } from "@fortawesome/free-solid-svg-icons";
 
@@ -17,11 +17,11 @@ const Header = () => {
     return (
         <header>
             <div className="container">
-                <img src={logo2} alt='logo' />
+                <h1 className="logo">Kowalik <span>Kamieniarstwo</span></h1>
                 <FontAwesomeIcon className="bars" icon={faBars} onClick={handleOpenMenu} />
                 <div className={`menu ${isOpen ? 'open' : ''}`}>
                     <FontAwesomeIcon className="bars x" icon={faX} onClick={handleOpenMenu} />
-                    <h1>Menu główne</h1>
+                    <h1 className="menu_h1">Menu główne</h1>
                     <Link className='Link' to='/'>
                         <p className={`p1 ${isActive('/')}`}>Strona główna</p>
                     </Link>

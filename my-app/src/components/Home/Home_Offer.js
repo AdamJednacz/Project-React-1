@@ -2,7 +2,7 @@ import React from 'react';
 import img1 from "../assets/parapet.jpg";
 import img2 from "../assets/m_architektura.jpg";
 import img3 from "../assets/elewacje.jpg";
-import img4 from "../assets/blaty.jpg";
+import img4 from "../assets/blat_łazienkowy.jpg";
 import img5 from "../assets/renowacje.jpg";
 import img6 from "../assets/schody.jpg";
 import { useNavigate } from 'react-router-dom';

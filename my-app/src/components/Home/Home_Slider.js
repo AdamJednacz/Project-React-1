@@ -1,70 +1,75 @@
-// import React from 'react';
-//
-// import img1 from '../../assets/img1.jpeg';
-// import img2 from '../../assets/img2.jpg';
-// import img3 from '../../assets/img3.jpg';
-// import img4 from '../../assets/img4.jpeg';
-// import img5 from '../../assets/img5.jpg';
-// import img6 from '../../assets/img6.jpg';
-// import { Swiper, SwiperSlide } from 'swiper/react';
-//
-// import 'swiper/css';
-// import 'swiper/css/effect-coverflow';
-// import 'swiper/css/pagination';
-// import 'swiper/css/navigation';
-//
-// import { EffectCoverflow, Pagination, Navigation } from 'swiper/modules';
-//
-// const images = [img1, img2, img3, img4, img5, img6];
-//
-// const MainSlider = () => {
-//
-//     return (
-//         <div className="container2">
-//
-//             <Swiper
-//                 effect={'coverflow'}
-//                 grabCursor={true}
-//                 centeredSlides={true}
-//                 loop={true}
-//                 slidesPerView={'auto'}
-//                 coverflowEffect={{
-//                     rotate: 0,
-//                     stretch: 0,
-//                     depth: 100,
-//                     modifier: 2.5,
-//                 }}
-//                 pagination={{ el: '.swiper-pagination', clickable: true }}
-//                 navigation={{
-//                     nextEl: '.swiper-button-next',
-//                     prevEl: '.swiper-button-prev',
-//                     clickable: true,
-//                 }}
-//                 modules={[EffectCoverflow, Pagination, Navigation]}
-//                 className="swiper_container"
-//             >
-//                 <SwiperSlide>
-//                     <img src={img1} alt="slide_image" />
-//                 </SwiperSlide>
-//                 <SwiperSlide>
-//                     <img src={img2} alt="slide_image" />
-//                 </SwiperSlide>
-//                 <SwiperSlide>
-//                     <img src={img3} alt="slide_image" />
-//                 </SwiperSlide>
-//                 <SwiperSlide>
-//                     <img src={img4} alt="slide_image" />
-//                 </SwiperSlide>
-//                 <SwiperSlide>
-//                     <img src={img5} alt="slide_image" />
-//                 </SwiperSlide>
-//                 <SwiperSlide>
-//                     <img src={img6} alt="slide_image" />
-//                 </SwiperSlide>
-//
-//
-//             </Swiper>
-//         </div>
-//     );
-// }
-// export default  MainSlider;
+import React, { useState, useEffect, useRef } from 'react';
+import img1 from "../assets/parapet.jpg";
+import img2 from "../assets/m_architektura.jpg";
+import img3 from "../assets/elewacje.jpg";
+import img4 from "../assets/blat_łazienkowy.jpg";
+import img5 from "../assets/renowacje.jpg";
+import img6 from "../assets/schody.jpg";
+
+
+const images = [img1, img2, img3, img4, img5, img6];
+
+const HomeSlider = () => {
+    const [current, setCurrent] = useState(0);
+    const [animating, setAnimating] = useState(false);
+    const intervalRef = useRef(null);
+
+    useEffect(() => {
+        startInterval();
+        return () => clearInterval(intervalRef.current);
+    }, []);
+
+    const startInterval = () => {
+        clearInterval(intervalRef.current);
+        intervalRef.current = setInterval(() => {
+            nextSlide();
+        }, 10000);
+    };
+
+    const nextSlide = () => {
+        if (animating) return;
+        setAnimating(true);
+        setCurrent((prev) => (prev === images.length - 1 ? 0 : prev + 1));
+    };
+
+    const prevSlide = () => {
+        if (animating) return;
+        setAnimating(true);
+        setCurrent((prev) => (prev === 0 ? images.length - 1 : prev - 1));
+    };
+
+    const handleDotClick = (index) => {
+        if (animating || index === current) return;
+        setAnimating(true);
+        setCurrent(index);
+        startInterval(); // resetowanie interwału po kliknięciu kropki
+    };
+
+    const handleAnimationEnd = () => {
+        setAnimating(false);
+    };
+
+    return (
+        <section className="slider">
+            <div className="slider-images">
+                <img
+                    src={images[current]}
+                    alt={`img-${current}`}
+                    className={`slider-image ${animating ? 'fade-in' : ''}`}
+                    onAnimationEnd={handleAnimationEnd}
+                />
+            </div>
+            <div className="slider-dots">
+                {images.map((_, index) => (
+                    <span
+                        key={index}
+                        className={`dot ${current === index ? 'active' : ''}`}
+                        onClick={() => handleDotClick(index)}
+                    ></span>
+                ))}
+            </div>
+        </section>
+    );
+};
+
+export default HomeSlider;

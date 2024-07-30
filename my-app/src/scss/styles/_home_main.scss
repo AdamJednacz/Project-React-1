@@ -5,15 +5,25 @@ main,.home_main {
   justify-content: center;
   color: #4e4e50;
   padding: 2rem 0;
+
   @include desktop {
     justify-content: center;
+    width: 80%;
   }
 
   .container {
-    justify-content: space-between;
+    @include desktop{
+      justify-content: space-between;
+    }
 
 
-    .card {
+    .main_card{
+      @include desktop {
+        height: 22rem;
+
+      }
+    }
+    .card,.main_card {
       display: flex;
       align-items: center;
       justify-content: center;
@@ -22,10 +32,9 @@ main,.home_main {
       text-align: left;
       margin: 1rem 0;
       box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+
       @include desktop {
         width: auto;
-        position: relative;
-        left: 10%;
         max-width: 30%;
         padding: 2rem;
         align-items: flex-start;

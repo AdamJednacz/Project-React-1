@@ -1,20 +1,24 @@
 import React from 'react';
-import MainSlider from "./Home_Slider";
+
 import {Link} from "react-router-dom";
+import Home_Slider from "./Home_Slider";
 
 const Home_Main = () => {
     return (
         <main className="home_main">
             <div className="container" >
-                <div className="card">
+                <div className="main_card">
                     <h1>Lorem Ipsum</h1>
                     <h2>Lorem Ipsum Dolor</h2>
                     <span>Ipsum</span>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
                     <Link className='Link' to='/onas'><button className='btn_main'>Zobacz więcej</button></Link>
                 </div>
-                {/*<MainSlider/>*/}
+
+                    <Home_Slider />
+
             </div>
+
         </main>
     );
 };
