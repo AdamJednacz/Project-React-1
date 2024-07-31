@@ -51,6 +51,9 @@
         justify-content: flex-end;
       }
       .info{
+        display: flex;
+        align-items: flex-start;
+        flex-direction: column;
 
         p{
         text-align: left;
@@ -60,6 +63,7 @@
             font-size: 1.25rem;
           }
         }
+
         .contact_number{
 
           color: #4e4e50;
@@ -73,12 +77,35 @@
             font-size: 1.25rem;
           }
         }
-      }
-      form{
+        .facebook{
+          display: flex;
+          justify-content: space-around;
+          align-items: center;
+          font-size: 2rem;
+          align-self: center;
+          padding: 0.5rem 1rem;
+          cursor: pointer;
+          border-radius: 10px;
+          width: 80%;
+          height: 4rem;
+          background-color: #3b5998;
+          margin: 1rem 0;
+          @include desktop{
+            align-self: normal;
+            padding: 0.5rem 1rem;
+          }
+        }
+        .icon{
+          color: #ffffff;
+          text-decoration: none;
+          font-weight: 600;
 
+        }
       }
+
     }
 
   }
 
 }
+
