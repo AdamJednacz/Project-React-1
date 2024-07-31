@@ -88,24 +88,26 @@
     }
   }
 
-  .projects_btn {
-    margin: 1rem;
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
-    background-color: #dea31b;
-    color: #ffffff;
-    padding: 0.7rem 1rem;
-    font-weight: 500;
-    border: #dea31b solid 1px;
-    transition: ease-in-out 0.3s;
 
-    @include desktop {
-      font-size: 1.5rem;
-      padding: 1rem 1.4rem;
-      &:hover{
-        background-color: #4e4e50;
-        border: #4e4e50 solid 1px;
-      }
+}
+
+.projects_btn {
+  margin: 1rem;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  background-color: #dea31b;
+  color: #ffffff;
+  padding: 0.7rem 1rem;
+  font-weight: 500;
+  border: #dea31b solid 1px;
+  transition: ease-in-out 0.3s;
+  white-space: nowrap;
+  @include desktop {
+    font-size: 1.5rem;
+    padding: 1rem 1.4rem;
+    &:hover{
+      background-color: #4e4e50;
+      border: #4e4e50 solid 1px;
     }
-
   }
+
 }

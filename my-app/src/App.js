@@ -18,6 +18,7 @@ function App() {
                     <Route path='/onas' element={<AboutUs/>}/>
                     <Route path='/oferta' element={<Offer/>}/>
                     <Route path='/realizacje' element={<Projects/>}/>
+                    <Route path='/realizacje/:id' element={<Projects/>}/>
                     <Route path='/kontakt' element={<Contact/>}/>
                 </Routes>
             </Suspense>

@@ -1,13 +1,13 @@
 import React, { useState, useEffect, useRef } from 'react';
-import img1 from "../assets/parapet.jpg";
-import img2 from "../assets/m_architektura.jpg";
-import img3 from "../assets/elewacje.jpg";
+import img1 from "../assets/beton_elewacje_2.jpg";
+import img2 from "../assets/beton_elewacje_3.jpg";
+
 import img4 from "../assets/blat_łazienkowy.jpg";
-import img5 from "../assets/renowacje.jpg";
-import img6 from "../assets/schody.jpg";
+import img5 from "../assets/beton_9.jpg";
+import img6 from "../assets/schody_renowacja.jpg";
 
 
-const images = [img1, img2, img3, img4, img5, img6];
+const images = [img1, img2, img4, img5, img6];
 
 const HomeSlider = () => {
     const [current, setCurrent] = useState(0);
@@ -23,7 +23,7 @@ const HomeSlider = () => {
         clearInterval(intervalRef.current);
         intervalRef.current = setInterval(() => {
             nextSlide();
-        }, 10000);
+        }, 6000);
     };
 
     const nextSlide = () => {

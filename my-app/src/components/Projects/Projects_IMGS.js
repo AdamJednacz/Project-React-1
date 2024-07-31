@@ -31,59 +31,87 @@ import renowacja_3_przed from '../assets/renowacja_3_przed.jpg';
 import renowacja_3_po from '../assets/renowacja_3_po.jpg';
 import renowacja_4_przed from '../assets/renowacja_4_przed.jpg';
 import renowacja_4_po from '../assets/renowacja_4_po.jpg';
-import renowacja_5_przed from '../assets/renowacja_5_przed.JPG';
 import renowacja_5_po from '../assets/renowacja_5_po.JPG';
+import renowacja_5_przed from '../assets/renowacja_5_przed.JPG';
+import schody_1 from '../assets/schody_1.jpg'
+import schody_2 from '../assets/schody_2.jpg'
+import schody_3 from '../assets/schody_3.jpg'
+import schody_4 from '../assets/schody_4.jpg'
 
 // Create a mapping from JSON keys to image imports
 const imageMap = {
-    beton_architektoniczny: [beton_1, beton_2, beton_3, beton_4, beton_5, beton_6, beton_7, beton_8, beton_9],
-    beton_elewacje: [beton_elewacje_1, beton_elewacje_2, beton_elewacje_3, beton_elewacje_4, beton_elewacje_5],
-    blaty: [blat_1, blat_2],
-    mała_architektura: [m_a_1, m_a_2, m_a_3],
-    piask_elewacje: [piask_elewacje_1, piask_elewacje_2, piask_elewacje_3, piask_elewacje_4],
+
+        parapety:[beton_5, beton_6 ,beton_2,beton_1,beton_3  ,beton_4,beton_7,],
+        schody:[schody_1,schody_2,schody_3,schody_4],
+        elewacje:[],
+        blaty: [blat_1, blat_2],
+        mała_architektura: [m_a_1, m_a_2, m_a_3],
+
+        beton_architektoniczny: [beton_elewacje_1, beton_elewacje_2, beton_elewacje_3, beton_elewacje_4, beton_elewacje_5,piask_elewacje_1, piask_elewacje_2, piask_elewacje_3, piask_elewacje_4, beton_9],
+        beton_elewacje: [],
+
+
+
+
     renowacje: [
         { before: renowacja_1_przed, after: renowacja_1_po },
         { before: renowacja_2_przed, after: renowacja_2_po },
         { before: renowacja_3_przed, after: renowacja_3_po },
         { before: renowacja_4_przed, after: renowacja_4_po },
         { before: renowacja_5_przed, after: renowacja_5_po }
-    ]
+    ],
+
 };
 
 const ProjectsImgs = ({ selectedOption1, selectedOption2, showRenovations, onImageClick }) => {
     const getImagesForOption = (option) => {
         return imageMap[option] || [];
     };
-
+    const getAllImages = (options) => {
+        return options.reduce((allImages, option) => {
+            return allImages.concat(imageMap[option] || []);
+        }, []);
+    };
     const renderImages = (images) => {
+        if (images.length === 0) {
+            return <h1 className="in_work">Prace są w toku...</h1>;
+        }
         return images.map((image, index) => (
-                <img
-                    src={image}
-                    alt={`Image ${index}`}
-                    className="project_img"
-                    onClick={() => onImageClick(image)}
-                />
-
+            <img
+                key={index}
+                src={image}
+                alt={`Image ${index}`}
+                className="project_img"
+                onClick={() => onImageClick(image)}
+            />
         ));
     };
 
+    const allKamienOptions = ['parapety', 'schody', 'elewacje', 'blaty', 'mała_architektura'];
+    const allInneOptions = ['beton_architektoniczny', 'beton_elewacje', 'piask_elewacje'];
+
+    const imagesToShow1 = selectedOption1 === 'montaż_kamienia*'  ? getAllImages(allKamienOptions) : getImagesForOption(selectedOption1);
+    const imagesToShow2 = selectedOption2 === 'montaż_beton*'  ? getAllImages(allInneOptions) : getImagesForOption(selectedOption2);
+
     return (
         <div className="projects_imgs">
+
             {selectedOption1 !== 'montaż_kamienia' && (
+
                 <div className={`image_gallery ${selectedOption1 ? 'show' : 'hide'}`}>
-                    {renderImages(getImagesForOption(selectedOption1))}
+                    {renderImages(imagesToShow1)}
                 </div>
             )}
 
-            {selectedOption2 !== 'montaż_inne' && (
+            {selectedOption2 !== 'montaż_beton' && (
                 <div className={`image_gallery ${selectedOption2 ? 'show' : 'hide'}`}>
-                    {renderImages(getImagesForOption(selectedOption2))}
+                    {renderImages(imagesToShow2)}
                 </div>
             )}
 
             {showRenovations && (
                 <div className="image_gallery">
-                    {getImagesForOption('renowacje').map((renovation, index) => (
+                    {imageMap.renowacje.map((renovation, index) => (
                         <div key={index} className="renovation_images_container">
                             <div className="renovation_images">
                                 <img

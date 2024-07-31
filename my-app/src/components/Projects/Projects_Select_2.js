@@ -1,19 +1,22 @@
 import React from 'react';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faAngleDown } from "@fortawesome/free-solid-svg-icons";
+import {useNavigate} from "react-router-dom";
 
-const ProjectsSelect2 = ({ isOpen, toggleDropdown, onOptionSelect, selectedOption }) => {
-    const options2 = ['Wszystkie*', 'Beton Architektoniczny', 'Gresy', 'Spieki Wieloformatowe'];
-
-
+const ProjectsSelect2 = ({ isOpen, toggleDropdown, selectedOption }) => {
+    const options2 = ['Montaż Beton*', 'Beton Architektoniczny', 'Gresy', 'Spieki Wieloformatowe'];
+    const navigate = useNavigate();
     const handleOptionClick2 = (option) => {
-        onOptionSelect(option); // Emit the formatted value
+
         toggleDropdown(); // Close the dropdown after selection
+        const formattedOption = option.toLowerCase().replace(/ /g, '_');
+        navigate(`/realizacje/${formattedOption}`);
     };
+
 
     return (
         <div className={`custom-select ${isOpen ? 'open' : ''}`} onClick={toggleDropdown}>
-            <div className="select-trigger">
+            <div className="select-trigger" >
                 {selectedOption}<FontAwesomeIcon className="icon" icon={faAngleDown} />
             </div>
             <div className="options">

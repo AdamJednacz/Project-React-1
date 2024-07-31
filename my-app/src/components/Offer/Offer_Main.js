@@ -65,7 +65,7 @@ const OfferMain = () => {
                     <div className="card">
 
                         <img src={img3} alt='img'/>
-                        <h2>Montaż Inne</h2>
+                        <h2>Montaż Beton</h2>
                         <p>Lorem ipsum dolor sit amet,
                             consectetur adipiscing elit
                             Lorem ipsum dolor sit amet,</p>
