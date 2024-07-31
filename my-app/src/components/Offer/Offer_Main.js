@@ -3,15 +3,30 @@ import React, {useState} from 'react';
 import img1 from '../assets/blat_łazienkowy.jpg';
 import img2 from '../assets/renowacje.jpg';
 import img3 from '../assets/beton_wnętrze_1.jpg';
+import {useNavigate} from "react-router-dom";
 
 const OfferMain = () => {
 
     const [expandedListId, setExpandedListId] = useState(null);
 
-
+    const navigate = useNavigate();
     const toggleList = (id) => {
         setExpandedListId(prevId => (prevId === id ? null : id));
     };
+    const sectionMapping = {
+        'Montaż Kamienia': 'montaż_kamienia*',
+        'Renowacje': 'renowacje',
+        'Montaż Betonu': 'montaż_beton*',
+
+    };
+    const handleLinkClick = (title) => {
+        const id = sectionMapping[title];
+        if (id) {
+            window.scrollTo(0, 0);
+            navigate(`/realizacje/${id}`);
+        }
+    };
+
 
     return (
         <main className="offer">
@@ -21,7 +36,7 @@ const OfferMain = () => {
 
                         <img src={img1} alt='img'/>
 
-                        <h2 className>Montaż Kamień</h2>
+                        <h2 className>Montaż Kamienia</h2>
                         <p>Lorem ipsum dolor sit amet,
                             consectetur adipiscing elit
                             Lorem ipsum dolor sit amet,</p>
@@ -29,7 +44,7 @@ const OfferMain = () => {
                                 onClick={() => toggleList('montaz')}>
                             {expandedListId === 'montaz' ? 'Ukryj Ofertę' : 'Zobacz Ofertę'}
                         </button>
-                        <button className="btn_offer_desktop">Zobacz Realizacje Montażu</button>
+                        <button className="btn_offer_desktop" onClick={()=>handleLinkClick("Montaż Kamienia")}>Zobacz Realizacje Montażu Kamienia</button>
 
                     </div>
                     <ul className={`offer-list ${expandedListId === 'montaz' ? 'visible' : 'invisible'}`}>
@@ -52,7 +67,7 @@ const OfferMain = () => {
                                 onClick={() => toggleList('renowacje')}>
                             {expandedListId === 'renowacje' ? 'Ukryj Ofertę' : 'Zobacz Ofertę'}
                         </button>
-                        <button className="btn_offer_desktop">Zobacz Realizacje Renowacji</button>
+                        <button className="btn_offer_desktop" onClick={()=>handleLinkClick("Renowacje")}>Zobacz Realizacje Renowacji</button>
                     </div>
                     <ul className={`offer-list ${expandedListId === 'renowacje' ? 'visible' : 'invisible'}`}>
                         <li>Posadzki z Lastriko</li>
@@ -73,7 +88,7 @@ const OfferMain = () => {
                                 onClick={() => toggleList('inne')}>
                             {expandedListId === 'inne' ? 'Ukryj Ofertę' : 'Zobacz Ofertę'}
                         </button>
-                        <button className="btn_offer_desktop">Zobacz Realizacje</button>
+                        <button className="btn_offer_desktop" onClick={()=>handleLinkClick("Montaż Betonu")}>Zobacz Realizacje Montażu Betonu</button>
                     </div>
                     <ul className={`offer-list ${expandedListId === 'inne' ? 'visible' : 'invisible'}`}>
                         <li>Montaż betonu architektonicznego</li>

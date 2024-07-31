@@ -51,6 +51,14 @@ const ProjectsMain = () => {
                 setSelectedOption1('Montaż Kamienia');
                 setSelectedOption2('Spieki Wieloformatowe');
                 setShowRenovations(false);
+            }else if (id === 'montaż_beton*') {
+                setSelectedOption1('Montaż Kamienia');
+                setSelectedOption2('Montaż Beton*');
+                setShowRenovations(false);
+            }else if (id === 'montaż_kamienia*') {
+                setSelectedOption1('Montaż Kamienia*');
+                setSelectedOption2('Montaż Beton');
+                setShowRenovations(false);
             }
 
         }
