@@ -1,8 +1,8 @@
 import React, {useState} from 'react';
 
-import img1 from '../assets/blat_łazienkowy.jpg';
-import img2 from '../assets/renowacje.jpg';
-import img3 from '../assets/beton_wnętrze_1.jpg';
+import img1 from '../assets/blat_łazienkowy.avif';
+import img2 from '../assets/renowacje.avif';
+import img3 from '../assets/beton_wnętrze_1.avif';
 import {useNavigate} from "react-router-dom";
 
 const OfferMain = () => {

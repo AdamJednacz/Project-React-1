@@ -4,7 +4,6 @@ footer {
   justify-content: center;
   background-color: #1F1F20;
   color: #4e4e50;
-  font-family: "Open Sans", sans-serif;
   padding: 2rem 0;
   box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.15);
   @include desktop {
@@ -32,22 +31,22 @@ footer {
       .col1 {
         display: none;
         position: relative;
-
         @include desktop {
           display: block;
-          h1 {
-            margin: 1rem 0;
-            font-weight: 600;
+        }
+        h1 {
+          margin-bottom: 0.5rem;
+          font-weight: 600;
 
-          }
-         p  {
-            margin: 1.2rem 0;
-            font-size: 0.8rem;
-            font-weight: 500;
-            text-align: left;
-            &:hover{
-              color:#ffffff;
-            }
+        }
+        p  {
+          margin: 1.2rem 0;
+          font-size: 0.8rem;
+          font-weight: 500;
+          text-align: left;
+
+          &:hover{
+            color:#ffffff;
           }
         }
       }
@@ -65,14 +64,17 @@ footer {
         h1 {
           margin: 1rem 0;
           font-weight: 600;
-
+          @include desktop{
+            margin-top: 0;
+            margin-bottom: 0.5rem;
+          }
         }
         p {
           margin: 0.5rem 0;
           font-size: 0.8rem;
           font-weight: 500;
           @include desktop{
-            margin: 1rem 0;
+            margin: 0.6rem 0;
           }
         }
         span {

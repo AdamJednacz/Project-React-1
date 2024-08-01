@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import {Link, useLocation, useNavigate} from 'react-router-dom';
+import { useLocation, useNavigate} from 'react-router-dom';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars, faX } from "@fortawesome/free-solid-svg-icons";
@@ -11,10 +11,10 @@ const Header = () => {
     const handleOpenMenu = () => {
         setIsOpen(!isOpen);
     };
-    const handleLinkClick = () => {
+    const handleLinkClick = (id) => {
 
             window.scrollTo(0, 0);
-            navigate(`/`);
+            navigate(`${id}`);
 
     };
     const isActive = (path) => location.pathname === path ? 'border' : '';
@@ -27,21 +27,11 @@ const Header = () => {
                 <div className={`menu ${isOpen ? 'open' : ''}`}>
                     <FontAwesomeIcon className="bars x" icon={faX} onClick={handleOpenMenu} />
                     <h1 className="menu_h1">Menu główne</h1>
-                    <Link className='Link' to='/'>
-                        <p className={`p1 ${isActive('/')}`}>Strona główna</p>
-                    </Link>
-                    <Link className='Link' to='/onas'>
-                        <p className={`${isActive('/onas')}`}>O nas</p>
-                    </Link>
-                    <Link className='Link' to='/oferta'>
-                        <p className={`${isActive('/oferta')}`}>Oferta</p>
-                    </Link>
-                    <Link className='Link' to='/realizacje'>
-                        <p className={`${isActive('/realizacje')}`}>Realizacje</p>
-                    </Link>
-                    <Link className='Link' to='/kontakt'>
-                        <p className={`${isActive('/kontakt')}`}>Kontakt</p>
-                    </Link>
+                        <p className={` ${isActive('/')}`} onClick={()=>handleLinkClick('/')}>Strona główna</p>
+                        <p className={`${isActive('/onas')}` } onClick={()=>handleLinkClick('/onas')}>O nas</p>
+                        <p className={`${isActive('/oferta')}`} onClick={()=>handleLinkClick('/oferta')}>Oferta</p>
+                        <p className={`${isActive('/realizacje')}`} onClick={()=>handleLinkClick('/realizacje')}>Realizacje</p>
+                        <p className={`${isActive('/kontakt')} `} onClick={()=>handleLinkClick('/kontakt')}>Kontakt</p>
                 </div>
                 <a className="number" href="tel:+48793316004">+48 793 316 004</a>
             </div>

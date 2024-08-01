@@ -1,11 +1,11 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
-import img1 from "../assets/parapet.jpg";
-import img2 from "../assets/m_architektura.jpg";
-import img3 from "../assets/elewacje.jpg";
-import img4 from "../assets/blat_łazienkowy.jpg";
-import img5 from "../assets/renowacje.jpg";
-import img6 from "../assets/schody.jpg";
+import img1 from "../assets/parapet.avif";
+import img2 from "../assets/m_architektura.avif";
+import img3 from "../assets/elewacje.avif";
+import img4 from "../assets/blat_łazienkowy.avif";
+import img5 from "../assets/renowacje.avif";
+import img6 from "../assets/schody.avif";
 
 const HomeOffer = () => {
     const navigate = useNavigate();

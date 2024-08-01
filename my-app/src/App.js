@@ -1,6 +1,6 @@
 import React, { Suspense, lazy } from 'react';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import bg from "./components/assets/biały_marmur.jpg";
+import bg from "./components/assets/biały_marmur.avif";
 import './App.scss';
 import Loading from "./components/Loading";
 

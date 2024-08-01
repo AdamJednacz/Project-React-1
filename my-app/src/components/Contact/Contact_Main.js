@@ -3,7 +3,7 @@ import React from 'react';
 import ContactForm from "./Contact_Form";
 import {faFacebook} from "@fortawesome/free-brands-svg-icons";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
-import logo from '../assets/logo2.png'
+import logo from '../assets/logo2.avif'
 const ContactMain = () => {
     return (
         <section className="contact_main">

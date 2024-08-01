@@ -1,10 +1,10 @@
 import React, { useState, useEffect, useRef } from 'react';
-import img1 from "../assets/beton_elewacje_2.jpg";
-import img2 from "../assets/beton_elewacje_3.jpg";
+import img1 from "../assets/beton_elewacje_2.avif";
+import img2 from "../assets/beton_elewacje_3.avif";
 
-import img4 from "../assets/blat_łazienkowy.jpg";
-import img5 from "../assets/beton_9.jpg";
-import img6 from "../assets/schody_renowacja.jpg";
+import img4 from "../assets/blat_łazienkowy.avif";
+import img5 from "../assets/beton_9.avif";
+import img6 from "../assets/schody_renowacja.avif";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faX} from "@fortawesome/free-solid-svg-icons";
 

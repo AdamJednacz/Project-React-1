@@ -13,7 +13,7 @@ const Offer = () => {
     return (
         <section>
             <Header/>
-            <Title h1={"Oferta"} p={"Lorem ipsum dolor"}/>
+            <Title h1={"Oferta"} p={"Tutaj drodzy państwo możecie znaleść naszą ofertę oraz co możemy wykonać."}/>
             <OfferMain/>
             <Footer/>
         </section>

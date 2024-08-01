@@ -10,16 +10,13 @@ header {
   align-items: center;
   width: 100%;
   padding: 1.5rem 0;
-  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
   position: sticky;
   top: 0;
   z-index: 4;
-
   @include desktop{
     padding: 1rem 0;
   }
-
-
   .container {
     width: 100%;
     max-width: 95%;
@@ -27,7 +24,6 @@ header {
     align-items: center;
     position: relative;
   }
-
   .logo{
     font-size: 1.5rem;
     font-family: "Times New Roman",sans-serif;
@@ -36,13 +32,11 @@ header {
     cursor: pointer;
     @include desktop{
       font-size: 2rem;
-
     }
     span{
       color: #4e4e50;
     }
   }
-
   .menu {
     width: 100vw;
     height: 100vh;
@@ -63,12 +57,10 @@ header {
       background:none;
       width: auto;
     }
-   .Link p {
+   p{
       padding: 1rem;
       margin-bottom: 2rem;
       cursor: pointer;
-
-
       @include desktop{
         font-size: 0.8rem;
         margin: 0 1rem;
@@ -78,7 +70,6 @@ header {
           border: 1px solid #4e4e50;
         }
       }
-
       &:last-of-type {
         padding-bottom: 1.5rem;
         @include desktop{
@@ -86,7 +77,6 @@ header {
         }
       }
     }
-
     }
     .menu_h1{
       position: relative;
@@ -97,12 +87,9 @@ header {
         display: none;
       }
     }
-
-
   .open {
     left: 0;
   }
-
   .bars {
     font-size: 1.5rem;
     color: #4e4e50;
@@ -112,7 +99,6 @@ header {
       display: none;
     }
   }
-
   .x{
     position: absolute;
     bottom: 93.5%;
@@ -120,7 +106,6 @@ header {
 
   }
 }
-
 .number{
   display: none;
   @include desktop{
@@ -139,8 +124,7 @@ header {
     background-color:  #4e4e50;
   }
 }
-
-.menu .Link p.border {
+.menu  p.border {
   @include desktop {
     border: 1px solid #4e4e50;
   }

@@ -1,5 +1,7 @@
 import React, {useRef, useState} from 'react';
 import emailjs from '@emailjs/browser';
+import {FontAwesomeIcon} from "@fortawesome/react-fontawesome"
+import { faFaceSmile } from "@fortawesome/free-solid-svg-icons";
 const HomeForm = () => {
     const [submitted, setSubmitted] = useState(false);
     const [emailError, setEmailError] = useState(false);
@@ -25,8 +27,8 @@ const HomeForm = () => {
 
         if (email && message) {
             emailjs.sendForm('service_fvsyx9b', 'template_z7dnmmz', form.current, 'xVX1u_j9htuV4fiW2')
-                .then((result) => {
-                    console.log(result.text);
+                .then(() => {
+
                     console.log("message sent");
                     e.target.reset();
                     setSubmitted(true);
@@ -37,6 +39,7 @@ const HomeForm = () => {
     };
     return (
         <form ref={form} onSubmit={sendEmail}>
+
             <h1>Skontaktuj się z nami!</h1>
             <input type="text" name="name" required={true} placeholder="Imię"/>
             <input type="text" name="surname" required={true}  placeholder="Nazwisko"/>
@@ -50,7 +53,9 @@ const HomeForm = () => {
                     obowiązującymi przepisami.</p>
             </div>
             <button type="submit" className="form_btn">Wyślij</button>
-
+            {submitted &&(
+                <p className="sended_message">Wiadomość została wysłana<FontAwesomeIcon className="icon" icon={faFaceSmile} /></p>
+            )}
         </form>
     );
 };
