@@ -43,7 +43,7 @@
           white-space: nowrap;
           font-size: 0.9rem;
           @include desktop{
-            font-size: 1rem;
+
             margin: 1rem 0;
           }
           &:first-of-type{
@@ -78,7 +78,7 @@
           transition: 0.7s all ease-in-out;
           @include desktop{
             height: 2.5rem;
-            width: 50%;
+            width: auto;
             padding: 0.5rem 1rem;
             &:hover{
               background-color: #ffffff;
