@@ -8,7 +8,7 @@ footer {
   padding: 2rem 0;
   box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.15);
   @include desktop {
-    padding: 3rem 0 3rem 0;
+    padding-top: 3rem;
   }
   .container {
     flex-direction: column;
@@ -31,24 +31,23 @@ footer {
       }
       .col1 {
         display: none;
+        position: relative;
+
         @include desktop {
           display: block;
           h1 {
-            margin-bottom: 2rem;
+            margin: 1rem 0;
             font-weight: 600;
-            font-size: 1.5rem;
+
           }
          p  {
             margin: 1.2rem 0;
-            font-size: 1.1rem;
+            font-size: 0.8rem;
             font-weight: 500;
             text-align: left;
             &:hover{
               color:#ffffff;
             }
-          }
-          &:before {
-            left: 30%;
           }
         }
       }
@@ -56,6 +55,7 @@ footer {
         display: flex;
         flex-direction: column;
         align-items: center;
+        position: relative;
         .contact_number{
           color: #4e4e50;
           &:hover{
@@ -65,13 +65,11 @@ footer {
         h1 {
           margin: 1rem 0;
           font-weight: 600;
-          @include desktop {
-            font-size: 1.5rem;
-          }
+
         }
         p {
           margin: 0.5rem 0;
-          font-size: 1.1rem;
+          font-size: 0.8rem;
           font-weight: 500;
           @include desktop{
             margin: 1rem 0;
@@ -80,58 +78,46 @@ footer {
         span {
           margin-right: 0.5rem;
         }
-        @include desktop {
 
-          &:before {
-            left: 50%;
-          }
-
-        }
       }
 
       .col3 {
         display: flex;
         flex-direction: column;
         align-items: center;
+        position: relative;
         h1 {
-          margin-top: 1rem;
+          margin: 1rem 0;
           font-weight: 600;
           align-self: center;
-          @include desktop {
-            font-size: 1.5rem;
-          }
+
         }
         .media {
           margin: 1rem;
-
           span, .icon {
             margin: 0 0.5rem;
             font-size: 1.5rem;
             color:#4e4e50;
           }
         }
-        @include desktop {
-          &:before {
-            left: 74%;
-          }
-        }
+
       }
     }
     .row2 {
       display: flex;
       flex-direction: column;
       align-items: center;
-      padding-top: 0.5rem;
-
+      padding-top: 1.5rem;
+      position: relative;
       &:before {
+        position: absolute;
+        top: -10%;
         content: '';
         width: 80vw;
         height: 1px;
         background-color: #4e4e50;
-        margin-bottom: 1.5rem;
-        @include desktop{
-          margin-bottom: 3rem;
-        }
+
+
       }
     }
   }
@@ -146,6 +132,7 @@ footer {
     height: 15vh;
     background-color: #4e4e50;
     margin-bottom: 1.5rem;
+    left: -5vw;
   }
 }
 }

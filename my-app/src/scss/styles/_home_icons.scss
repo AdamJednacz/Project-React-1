@@ -22,23 +22,21 @@
       width: 50vw;
       padding: 2rem;
       margin: 1rem;
-      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15);
+      box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
       @include desktop{
         width: 18vw;
-        padding: 3rem;
         margin: 0 2rem;
         transition: 0.7s ease-in-out;
         &:hover{
           scale: 1.05;
         }
-
     }
       h1{
         font-family: "Times New Roman", sans-serif;
         font-weight: 600;
         font-size: 1.5rem;
         @include desktop{
-          font-size: 2.5rem;
+          font-size: 2rem;
           text-wrap: none;
         }
       }
@@ -55,9 +53,7 @@
         span{
           font-weight: bolder;
         }
-        @include desktop{
-          font-size: 1.25rem;
-        };
+
       }
     }
   }

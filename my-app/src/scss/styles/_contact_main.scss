@@ -9,40 +9,6 @@
     @include desktop{
 
     }
-      .contact_text{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        @include desktop{
-          display: flex;
-          align-items: flex-start;
-          justify-content: center;
-          flex-direction: column;
-          width: 100%;
-        }
-        h1{
-          font-size: 1.5rem;
-          font-family: "Times New Roman",sans-serif;
-          color: #dea31b;
-          text-align: center;
-          @include desktop{
-            font-size: 2.5rem;
-          }
-        }
-        p{
-          text-align: center;
-          margin: 1rem 0;
-          line-height: 20px;
-          max-width: 80%;
-          @include desktop{
-            max-width: 40%;
-            text-align: left;
-            line-height: 24px;
-            font-size: 1.25rem;
-          }
-        }
-      }
     .contact_info{
       @include desktop{
         margin: 2rem 0;
@@ -75,25 +41,25 @@
         margin: 0.5rem 0;
           line-height: 18px;
           white-space: nowrap;
+          font-size: 0.9rem;
           @include desktop{
-            font-size: 1.25rem;
+            font-size: 1rem;
             margin: 1rem 0;
+          }
+          &:first-of-type{
+            margin-top: 1.5rem;
           }
         }
 
         .contact_number{
 
           color: #4e4e50;
-          @include desktop{
-            font-size: 1.25rem;
-          }
+
         }
         span{
           font-weight: bold;
           text-decoration: none;
-          @include desktop{
-            font-size: 1.25rem;
-          }
+
         }
         .facebook{
           display: flex;
@@ -111,10 +77,8 @@
           box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15);
           transition: 0.7s all ease-in-out;
           @include desktop{
-            height: 3rem;
-            font-size: 2rem;
+            height: 2.5rem;
             width: 50%;
-
             padding: 0.5rem 1rem;
             &:hover{
               background-color: #ffffff;
@@ -126,7 +90,6 @@
           color: #ffffff;
           text-decoration: none;
           font-weight: 600;
-
         .fb{
           margin-right: 1rem;
         }

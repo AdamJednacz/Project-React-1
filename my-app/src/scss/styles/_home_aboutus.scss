@@ -24,7 +24,7 @@
           width: 80%;
           @include desktop{
             margin: 1rem;
-            width: 30rem;
+            width: 25rem;
           }
         }
 
@@ -42,7 +42,7 @@
           color: #dea31b;
           margin: 1rem 0;
           @include desktop{
-            font-size: 2.5rem;
+            font-size: 2rem;
           }
         }
 
@@ -52,7 +52,7 @@
           line-height: 20px;
 
           @include desktop{
-            font-size: 1.25rem;
+            font-size: 1rem;
             line-height: 24px;
           }
         }
@@ -67,8 +67,8 @@
           border: #dea31b solid 1px;
           transition: ease-in-out 0.3s;
           @include desktop {
-            font-size: 1.5rem;
-            padding: 1rem 1.4rem;
+            font-size: 1rem;
+            padding: 0.8rem 1.4rem;
 
           }
 

@@ -1,20 +1,18 @@
 .projects_imgs {
   width: 100%;
-
+  min-height: 25vh;
+  align-content: center;
   .image_gallery{
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     align-items: normal;
     width: 100%;
-
     @include desktop{
       padding: 4rem 0;
 
     }
-
     .project_img {
-
       object-fit: cover;
       width: 8rem;
       height: 14rem;
@@ -22,15 +20,12 @@
       flex: 1;
       cursor: pointer;
       position: relative;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-
+      box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
       @include desktop {
         width: auto;
-        height: 20rem;
+        height: 16rem;
       }
-
     }
-
     .renovation_images_container {
       display: flex;
       justify-content: center;
@@ -52,11 +47,10 @@
           margin: 0.5rem;
           cursor: pointer;
           position: relative;
-          box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
           @include desktop {
-            width: 15rem;
-            height: 30rem;
-
+            width: 10rem;
+            height: 20rem;
           }
         }
       }
@@ -110,8 +104,4 @@
   color: #dea31b;
   font-family: "Times New Roman", sans-serif;
 
-  @include desktop {
-    font-size: 2.5rem;
-    padding: 0 2rem 0 0 ;
-  }
 }

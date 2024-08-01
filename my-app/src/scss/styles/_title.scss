@@ -1,6 +1,6 @@
 .bg {
-  padding: 2rem 0;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15);
+  padding: 1rem 0;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
   .title_container {
     @include desktop{
     justify-content: flex-start;
@@ -19,7 +19,7 @@
       @include desktop {
         width: auto;
         max-width: 40%;
-        padding: 2rem;
+        padding: 1.5rem;
         align-items: flex-start;
       }
 
@@ -29,7 +29,7 @@
         font-family: "Times New Roman", sans-serif;
 
         @include desktop {
-          font-size: 2.5rem;
+          font-size: 2rem;
           padding: 0 2rem 0 0 ;
         }
       }
@@ -43,7 +43,7 @@
           text-align: left;
           padding: 0;
           max-width: 100%;
-          font-size: 1.25rem;
+
           line-height: 24px;
         }
       }

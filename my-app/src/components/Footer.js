@@ -1,11 +1,18 @@
 import React from 'react';
 import logo from './assets/logo2.png'
-import {Link} from "react-router-dom";
+import {Link, useNavigate} from "react-router-dom";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faPhone, faEnvelope} from "@fortawesome/free-solid-svg-icons";
 import {faFacebook,faWhatsapp} from '@fortawesome/free-brands-svg-icons'
 
 const Footer = () => {
+    const navigate = useNavigate();
+    const handleLinkClick = (id) => {
+        if (id) {
+            window.scrollTo(0, 0);
+            navigate(`${id}`);
+        }
+    };
     return (
         <footer>
             <div className="container">
@@ -13,11 +20,11 @@ const Footer = () => {
                 <img src={logo} alt='logo'/>
                 <div className='col1 line'>
                     <h1>Informacje</h1>
-                    <p><Link className='Link hoveredWhite' to='/'>Strona główna</Link></p>
-                    <p><Link className='Link hoveredWhite' to='/onas'>O nas</Link></p>
-                    <p><Link className='Link hoveredWhite' to='/oferta'>Oferta</Link></p>
-                    <p><Link className='Link hoveredWhite' to='/realizacje'>Realizacje</Link></p>
-                    <p><Link className='Link hoveredWhite' to='/kontakt'>Kontakt</Link></p>
+                    <p className=" hoveredWhite" onClick={()=>handleLinkClick("/")}>Strona główna</p>
+                    <p className=" hoveredWhite" onClick={()=>handleLinkClick("/onas")}>O nas</p>
+                    <p className=" hoveredWhite" onClick={()=>handleLinkClick("/oferta")}>Oferta</p>
+                    <p className=" hoveredWhite" onClick={()=>handleLinkClick("/realizacje")}>Realizacje</p>
+                    <p className=" hoveredWhite" onClick={()=>handleLinkClick("/kontakt")}>Kontakt</p>
                 </div>
                 <div className='col2 line'>
                     <h1>Kontakt</h1>

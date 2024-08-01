@@ -78,11 +78,13 @@ const ProjectsImgs = ({ selectedOption1, selectedOption2, showRenovations, onIma
         }
         return images.map((image, index) => (
             <img
+                loading="lazy"
                 key={index}
                 src={image}
                 alt={`Image ${index}`}
                 className="project_img"
                 onClick={() => onImageClick(image)}
+
             />
         ));
     };
@@ -115,10 +117,12 @@ const ProjectsImgs = ({ selectedOption1, selectedOption2, showRenovations, onIma
                         <div key={index} className="renovation_images_container">
                             <div className="renovation_images">
                                 <img
+                                    loading="lazy"
                                     src={renovation.before}
                                     alt={`Renovation Before ${index}`}
                                     className="renovation_img"
                                     onClick={() => onImageClick(renovation.before)}
+
                                 />
                                 <h1>Przed</h1>
                             </div>

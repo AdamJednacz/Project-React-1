@@ -18,8 +18,8 @@
     margin: 1rem;
     min-width: 5rem;
     @include desktop{
-      padding: 1.188rem 1rem;
-      width: 20rem;
+      padding: 0.8rem 1.4rem;
+      width: 15rem;
       &:hover{
         background-color: #4e4e50;
       }
@@ -28,17 +28,10 @@
       display: flex;
       align-items: center;
       font-size: 1rem;
-
-
       color: #ffffff;
-
       white-space: nowrap; // Prevent text wrapping
       transition: transform 0.3s ease-in-out; // Smooth transition for icon rotation
 
-      @include desktop {
-        font-size: 1.5rem;
-
-      }
 
       .icon {
         margin-left: 0.25rem;
@@ -102,8 +95,8 @@
   transition: ease-in-out 0.3s;
   white-space: nowrap;
   @include desktop {
-    font-size: 1.5rem;
-    padding: 1rem 1.4rem;
+
+    padding: 0.8rem 1.4rem;
     &:hover{
       background-color: #4e4e50;
       border: #4e4e50 solid 1px;

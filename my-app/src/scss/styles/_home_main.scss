@@ -17,12 +17,6 @@ main,.home_main {
     }
 
 
-    .main_card{
-      @include desktop {
-        height: 22rem;
-
-      }
-    }
     .card,.main_card {
       display: flex;
       align-items: center;
@@ -32,10 +26,11 @@ main,.home_main {
       text-align: left;
       margin: 1rem 0;
       box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+      height: auto;
 
       @include desktop {
         width: auto;
-        max-width: 30%;
+        max-width: 40%;
         padding: 2rem;
         align-items: flex-start;
       }
@@ -46,8 +41,8 @@ main,.home_main {
         margin-top: 2rem;
         font-family: "Times New Roman", sans-serif;
         @include desktop {
-          font-size: 2.5rem;
-          margin-top: 2rem;
+          font-size: 2rem;
+          margin-top: 0;
 
         }
       }
@@ -57,7 +52,7 @@ main,.home_main {
         text-align: center ;
 
         @include desktop {
-          font-size: 2rem;
+          font-size: 1.75rem;
           text-align: left;
         }
       }
@@ -76,8 +71,8 @@ main,.home_main {
         @include desktop {
         text-align: left;
           padding: 0;
-          max-width: 70%;
-          font-size: 1.25rem;
+
+          font-size: 1rem;
           line-height: 24px;
         }
       }
@@ -91,10 +86,12 @@ main,.home_main {
         font-weight: 500;
         border: #dea31b solid 1px;
         transition: ease-in-out 0.3s;
+        font-size: 1rem;
         @include desktop {
-          font-size: 1.5rem;
-          padding: 1rem 1.4rem;
-
+          font-size: 1rem;
+          padding: 0.8rem 1.4rem;
+          margin-top: 2rem;
+          margin-bottom: 0;
         }
 
         &:hover {

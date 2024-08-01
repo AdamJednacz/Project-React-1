@@ -69,7 +69,7 @@
           margin-bottom: 1rem;
           @include desktop{
             display: block;
-            font-size: 2.5rem;
+            font-size: 2rem;
             margin: 1rem 0;
           }
         }
@@ -78,8 +78,9 @@
           margin-top: 1rem;
           line-height: 20px;
           @include desktop{
+            max-width: 80%;
             text-align: center;
-            margin-top: 2rem;
+            margin-top: 1rem;
             line-height: 24px;
           }
         }
@@ -109,9 +110,7 @@
           margin-bottom: 0.5rem;
           margin-left: 1rem;
           font-weight: bold;
-          @include desktop{
-            font-size: 1.1rem;
-          }
+
         }
       }
     }
@@ -164,12 +163,12 @@
   @include desktop{
     display: block;
     margin: 2rem 0;
-    font-size: 1.2rem;
+    font-size: 1rem;
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
     background-color: #dea31b;
     border: #dea31b solid 1px;
     color: #ffffff;
-    padding: 0.7rem 1rem;
+    padding: 0.8rem 1.4rem;
     font-weight: 500;
     transition: ease-in-out 0.3s;
     &:hover{

@@ -11,7 +11,7 @@
       color: #dea31b;
       margin: 1rem 0;
       @include desktop{
-        font-size: 2.5rem;
+        font-size: 2rem;
       }
     }
     p{
@@ -21,7 +21,6 @@
       line-height: 20px;
       @include desktop{
         line-height: 24px;
-        font-size: 1.25rem;
         margin-bottom: 0.5rem;
         max-width: 30%;
       }
@@ -36,8 +35,7 @@
       border: #dea31b solid 1px;
       transition: ease-in-out 0.3s;
       @include desktop {
-        font-size: 1.5rem;
-        padding: 1rem 1.4rem;
+        padding: 0.8rem 1.4rem;
         margin:2rem 0 1rem;
       }
 
@@ -75,7 +73,7 @@
             justify-content: center;
             flex-direction: column;
             width: 100%;
-            height: 25rem;
+            height: 20rem;
             margin-bottom: 2rem;
             position: relative; /* Necessary for the overlay */
             overflow: hidden;
@@ -105,20 +103,18 @@
               text-decoration: underline;
               margin-top: 1rem;
               cursor: pointer;
-              @include desktop {
-                font-size: 1.25rem;
-              }
+
             }
             h2 {
               text-align: center;
               color: #ffffff;
-              font-size: 2rem;
+              font-size: 1.5rem;
               z-index: 1;
 
             }
           }
           .half {
-            height: 12.5rem;
+            height: 10rem;
           }
         }
       }
