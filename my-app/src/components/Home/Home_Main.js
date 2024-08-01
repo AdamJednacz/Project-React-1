@@ -1,8 +1,8 @@
-import React from 'react';
+import React, {lazy} from 'react';
 
 import {Link} from "react-router-dom";
-import Home_Slider from "./Home_Slider";
 
+const Home_Slider  = lazy(() => import("../Home/Home_Slider"));
 const Home_Main = () => {
     return (
         <main className="home_main">
