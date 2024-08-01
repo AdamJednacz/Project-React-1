@@ -11,6 +11,7 @@ import HomeOffer from "./Home_Offer";
 
 
 import HomeContact from "./Home_Contact";
+import Loading from "../Loading";
 const Home = () => {
 
 
@@ -25,6 +26,7 @@ const Home = () => {
             <HomeOffer/>
             <HomeContact/>
             <Footer/>
+
         </>
     );
 };

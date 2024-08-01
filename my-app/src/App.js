@@ -2,6 +2,7 @@ import React, { Suspense, lazy } from 'react';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import bg from "./components/assets/biały_marmur.jpg";
 import './App.scss';
+import Loading from "./components/Loading";
 
 const Home = lazy(() => import("./components/Home/Home"));
 const Offer = lazy(() => import("./components/Offer/Offer"));
@@ -12,7 +13,7 @@ const Contact = lazy(() => import("./components/Contact/Contact"));
 function App() {
     return (
         <BrowserRouter>
-            <Suspense fallback={<div>Loading...</div>}>
+            <Suspense fallback={<Loading/>}>
                 <Routes>
                     <Route path='/' element={<Home/>}/>
                     <Route path='/onas' element={<AboutUs/>}/>

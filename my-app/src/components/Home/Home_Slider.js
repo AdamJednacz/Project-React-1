@@ -5,6 +5,8 @@ import img2 from "../assets/beton_elewacje_3.jpg";
 import img4 from "../assets/blat_łazienkowy.jpg";
 import img5 from "../assets/beton_9.jpg";
 import img6 from "../assets/schody_renowacja.jpg";
+import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
+import {faX} from "@fortawesome/free-solid-svg-icons";
 
 
 const images = [img1, img2, img4, img5, img6];
@@ -13,7 +15,7 @@ const HomeSlider = () => {
     const [current, setCurrent] = useState(0);
     const [animating, setAnimating] = useState(false);
     const intervalRef = useRef(null);
-
+    const [popupImage, setPopupImage] = useState(null);
     useEffect(() => {
         startInterval();
         return () => clearInterval(intervalRef.current);
@@ -49,6 +51,13 @@ const HomeSlider = () => {
         setAnimating(false);
     };
 
+    const handleImageClick = (image) => {
+        setPopupImage(image);
+    };
+
+    const handleClosePopup = () => {
+        setPopupImage(null);
+    };
     return (
         <section className="slider">
             <div className="slider-images">
@@ -57,6 +66,7 @@ const HomeSlider = () => {
                     alt={`img-${current}`}
                     className={`slider-image ${animating ? 'fade-in' : ''}`}
                     onAnimationEnd={handleAnimationEnd}
+                    onClick={() => handleImageClick(images[current])} // Pass the correct image source
                 />
             </div>
             <div className="slider-dots">
@@ -67,6 +77,10 @@ const HomeSlider = () => {
                         onClick={() => handleDotClick(index)}
                     ></span>
                 ))}
+            </div>
+            <div className={`popup ${popupImage ? '' : 'hidden'}`}>
+                <img src={popupImage} alt={popupImage} className="popup__img" />
+                <FontAwesomeIcon className="popup__close" icon={faX} onClick={handleClosePopup} />
             </div>
         </section>
     );
