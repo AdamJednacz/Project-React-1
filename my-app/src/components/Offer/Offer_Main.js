@@ -36,7 +36,7 @@ const OfferMain = () => {
 
                         <img src={img1} alt='img'/>
 
-                        <h2 className>Montaż Kamienia</h2>
+                        <h2>Montaż Kamienia</h2>
                         <p>Lorem ipsum dolor sit amet,
                             consectetur adipiscing elit
                             Lorem ipsum dolor sit amet,</p>

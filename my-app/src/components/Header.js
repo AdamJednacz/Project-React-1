@@ -22,7 +22,7 @@ const Header = () => {
     return (
         <header>
             <div className="container">
-                <h1 onClick={handleLinkClick} className="logo">Kowalik <span>Kamieniarstwo</span></h1>
+                <h1 onClick={()=>handleLinkClick('/')} className="logo">Kowalik <span>Kamieniarstwo</span></h1>
                 <FontAwesomeIcon className="bars" icon={faBars} onClick={handleOpenMenu} />
                 <div className={`menu ${isOpen ? 'open' : ''}`}>
                     <FontAwesomeIcon className="bars x" icon={faX} onClick={handleOpenMenu} />
