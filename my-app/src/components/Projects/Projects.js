@@ -1,10 +1,12 @@
-import React from 'react';
+import React, {lazy} from 'react';
 import { useParams } from 'react-router-dom';
-import Header from "../Header";
-import Footer from "../Footer";
-import ProjectsMain from "./Projects_Main";
-import Title from "../Title";
 
+
+
+const Header = lazy(() => import("../Header"));
+const Footer = lazy(() => import("../Footer"));
+const Title = lazy(() => import("../Title"));
+const ProjectsMain = lazy(() => import("../Projects/Projects_Main"));
 const Projects = () => {
     // Extract the 'id' parameter from the URL
     const { id } = useParams();

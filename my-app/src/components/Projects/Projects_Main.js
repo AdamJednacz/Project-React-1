@@ -1,10 +1,10 @@
-import React, { useState, useEffect } from 'react';
-import Projects_Buttons from './Projects_Buttons';
-import ProjectsImgs from './Projects_IMGS';
+import React, {useState, useEffect, lazy} from 'react';
+
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faX } from "@fortawesome/free-solid-svg-icons";
 import {useNavigate, useParams} from "react-router-dom";
-
+const Projects_Buttons = lazy(() => import("../Projects/Projects_Buttons"));
+const ProjectsImgs = lazy(() => import("../Projects/Projects_IMGS"));
 const ProjectsMain = () => {
     const [selectedOption1, setSelectedOption1] = useState('Montaż Kamienia*');
     const [selectedOption2, setSelectedOption2] = useState('Montaż Beton*');

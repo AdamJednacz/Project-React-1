@@ -1,26 +1,20 @@
-import React from 'react';
+import React, {lazy} from 'react';
 
+const Header = lazy(() => import("../Header"));
+const Footer = lazy(() => import("../Footer"));
+const Home_Main = lazy(() => import("../Home/Home_Main"));
+const HomeAboutUs = lazy(() => import("../Home/Home_AboutUs"));
+const Home_Icons = lazy(() => import("../Home/Home_Icons"));
+const HomeOffer = lazy(() => import("../Home/Home_Offer"));
+const HomeContact = lazy(() => import("../Home/Home_Contact"));
 
-import Home_Main from "./Home_Main";
-import Header from "../Header";
-import Footer from "../Footer";
-import HomeAboutUs from "./Home_AboutUs";
-import {style} from "../../App";
-import Home_Icons from "./Home_Icons";
-import HomeOffer from "./Home_Offer";
-
-
-import HomeContact from "./Home_Contact";
-import Loading from "../Loading";
 const Home = () => {
 
 
     return (
         <>
             <Header/>
-            <div className='bg' style={style}>
-                <Home_Main/>
-            </div>
+            <Home_Main/>
             <HomeAboutUs/>
             <Home_Icons/>
             <HomeOffer/>

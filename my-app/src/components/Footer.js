@@ -1,6 +1,6 @@
 import React from 'react';
 import logo from './assets/logo2.avif'
-import {Link, useNavigate} from "react-router-dom";
+import { useNavigate} from "react-router-dom";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faPhone, faEnvelope} from "@fortawesome/free-solid-svg-icons";
 import {faFacebook,faWhatsapp} from '@fortawesome/free-brands-svg-icons'

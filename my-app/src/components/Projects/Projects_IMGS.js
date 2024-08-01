@@ -7,7 +7,6 @@ import beton_4 from '../assets/beton_4.avif';
 import beton_5 from '../assets/beton_5.avif';
 import beton_6 from '../assets/beton_6.avif';
 import beton_7 from '../assets/beton_7.avif';
-import beton_8 from '../assets/beton_8.avif';
 import beton_9 from '../assets/beton_9.avif';
 import beton_elewacje_1 from '../assets/beton_elewacje_1.avif';
 import beton_elewacje_2 from '../assets/beton_elewacje_2.avif';

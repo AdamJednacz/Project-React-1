@@ -1,8 +1,8 @@
-import React, { useState } from 'react';
-import ProjectsSelect1 from './Projects_Select_1';
-import ProjectsSelect2 from './Projects_Select_2';
-import { useNavigate } from 'react-router-dom';
+import React, {lazy, useState} from 'react';
 
+import { useNavigate } from 'react-router-dom';
+const ProjectsSelect1 = lazy(() => import("../Projects/Projects_Select_1"));
+const ProjectsSelect2 = lazy(() => import("../Projects/Projects_Select_2"));
 const Projects_Buttons = ({
 
                               onRenovationClick,

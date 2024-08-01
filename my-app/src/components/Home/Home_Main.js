@@ -1,10 +1,12 @@
 import React, {lazy} from 'react';
 
 import {Link} from "react-router-dom";
+import {style} from "../../App";
 
 const Home_Slider  = lazy(() => import("../Home/Home_Slider"));
 const Home_Main = () => {
     return (
+        <div className='bg' style={style}>
         <main className="home_main">
             <div className="container" >
                 <div className="main_card">
@@ -20,6 +22,7 @@ const Home_Main = () => {
             </div>
 
         </main>
+        </div>
     );
 };
 

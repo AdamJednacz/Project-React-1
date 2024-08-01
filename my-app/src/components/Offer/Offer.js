@@ -1,11 +1,11 @@
-import React from 'react';
-import Header from "../Header";
-import Footer from "../Footer";
-import OfferMain from "./Offer_Main";
-import {style} from "../../App";
-import Home_Main from "../Home/Home_Main";
-import Title from "../Title";
+import React, {lazy} from 'react';
 
+
+
+const Title = lazy(() => import("../Title"));
+const Header = lazy(() => import("../Header"));
+const Footer = lazy(() => import("../Footer"));
+const OfferMain = lazy(() => import("../Offer/Offer_Main"));
 
 const Offer = () => {
 

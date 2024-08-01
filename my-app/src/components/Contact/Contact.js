@@ -1,10 +1,8 @@
-import React from 'react';
-import Header from "../Header";
-import Footer from "../Footer";
-import {style} from "../../App";
-import Contact_Main from "./Contact_Main";
-import Title from "../Title";
-
+import React, {lazy} from 'react';
+const Header = lazy(() => import("../Header"));
+const Footer = lazy(() => import("../Footer"));
+const Title = lazy(() => import("../Title"));
+const Contact_Main  = lazy(() => import("../Contact/Contact_Main"));
 const Contact = () => {
     return (
         <section>
