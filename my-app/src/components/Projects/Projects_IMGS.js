@@ -1,104 +1,96 @@
-import React from 'react';
-// Import images
-import beton_1 from '../assets/beton_1.avif';
-import beton_2 from '../assets/beton_2.avif';
-import beton_3 from '../assets/beton_3.avif';
-import beton_4 from '../assets/beton_4.avif';
-import beton_5 from '../assets/beton_5.avif';
-import beton_6 from '../assets/beton_6.avif';
-import beton_7 from '../assets/beton_7.avif';
-import beton_9 from '../assets/beton_9.avif';
-import beton_elewacje_1 from '../assets/beton_elewacje_1.avif';
-import beton_elewacje_2 from '../assets/beton_elewacje_2.avif';
-import beton_elewacje_3 from '../assets/beton_elewacje_3.avif';
-import beton_elewacje_4 from '../assets/beton_elewacje_4.avif';
-import beton_elewacje_5 from '../assets/beton_elewacje_5.avif';
-import blat_1 from '../assets/blat_łazienkowy.avif';
-import blat_2 from '../assets/blat_kuchenny.avif';
-import m_a_1 from '../assets/m_architektura_1.avif';
-import m_a_2 from '../assets/m_architektura_2.avif';
-import m_a_3 from '../assets/m_architektura_3.avif';
-import piask_elewacje_1 from '../assets/piask_elewacje_1.avif';
-import piask_elewacje_2 from '../assets/piask_elewacje_2.avif';
-import piask_elewacje_3 from '../assets/piask_elewacje_3.avif';
-import piask_elewacje_4 from '../assets/piask_elewacje_4.avif';
-import renowacja_1_przed from '../assets/renowacja_1_przed.avif';
-import renowacja_1_po from '../assets/renowacja_1_po.avif';
-import renowacja_2_przed from '../assets/renowacja_2_przed.avif';
-import renowacja_2_po from '../assets/renowacja_2_po.avif';
-import renowacja_3_przed from '../assets/renowacja_3_przed.avif';
-import renowacja_3_po from '../assets/renowacja_3_po.avif';
-import renowacja_4_przed from '../assets/renowacja_4_przed.avif';
-import renowacja_4_po from '../assets/renowacja_4_po.avif';
-import renowacja_5_po from '../assets/renowacja_5_po.avif';
-import renowacja_5_przed from '../assets/renowacja_5_przed.avif';
-import schody_1 from '../assets/schody_1.avif'
-import schody_2 from '../assets/schody_2.avif'
-import schody_3 from '../assets/schody_3.avif'
-import schody_4 from '../assets/schody_4.avif'
+import React, { useState, useEffect, useMemo } from 'react';
 
-// Create a mapping from JSON keys to image imports
-const imageMap = {
-
-        parapety:[beton_5, beton_6 ,beton_2,beton_1,beton_3  ,beton_4,beton_7,],
-        schody:[schody_1,schody_2,schody_3,schody_4],
-        elewacje:[],
-        blaty: [blat_1, blat_2],
-        mała_architektura: [m_a_1, m_a_2, m_a_3],
-
-        beton_architektoniczny: [beton_elewacje_1, beton_elewacje_2, beton_elewacje_3, beton_elewacje_4, beton_elewacje_5,piask_elewacje_1, piask_elewacje_2, piask_elewacje_3, piask_elewacje_4, beton_9],
-        beton_elewacje: [],
-
-
-
-
-    renowacje: [
-        { before: renowacja_1_przed, after: renowacja_1_po },
-        { before: renowacja_2_przed, after: renowacja_2_po },
-        { before: renowacja_3_przed, after: renowacja_3_po },
-        { before: renowacja_4_przed, after: renowacja_4_po },
-        { before: renowacja_5_przed, after: renowacja_5_po }
-    ],
-
+// Dynamic import of images
+const importImages = (r) => {
+    let images = {};
+    r.keys().map((item, index) => { images[item.replace('./', '')] = r(item); });
+    return images;
 };
 
+const images = importImages(require.context('../assets', false, /\.(avif)$/));
+
 const ProjectsImgs = ({ selectedOption1, selectedOption2, showRenovations, onImageClick }) => {
+    const [loadedImages, setLoadedImages] = useState([]);
+
+    const imageMap = useMemo(() => ({
+        parapety: ['beton_5.avif', 'beton_6.avif', 'beton_2.avif', 'beton_1.avif', 'beton_3.avif', 'beton_4.avif', 'beton_7.avif'],
+        schody: ['schody_1.avif', 'schody_2.avif', 'schody_3.avif', 'schody_4.avif'],
+        elewacje: [],
+        blaty: ['blat_łazienkowy.avif', 'blat_kuchenny.avif'],
+        mała_architektura: ['m_architektura_1.avif', 'm_architektura_2.avif', 'm_architektura_3.avif'],
+        beton_architektoniczny: ['beton_elewacje_1.avif', 'beton_elewacje_2.avif', 'beton_elewacje_3.avif', 'beton_elewacje_4.avif', 'beton_elewacje_5.avif', 'piask_elewacje_1.avif', 'piask_elewacje_2.avif', 'piask_elewacje_3.avif', 'piask_elewacje_4.avif', 'beton_9.avif'],
+        beton_elewacje: [],
+        renowacje: [
+            { before: 'renowacja_1_przed.avif', after: 'renowacja_1_po.avif' },
+            { before: 'renowacja_2_przed.avif', after: 'renowacja_2_po.avif' },
+            { before: 'renowacja_3_przed.avif', after: 'renowacja_3_po.avif' },
+            { before: 'renowacja_4_przed.avif', after: 'renowacja_4_po.avif' },
+            { before: 'renowacja_5_przed.avif', after: 'renowacja_5_po.avif' }
+        ]
+    }), []);
+
+    useEffect(() => {
+        const loadImage = (image) => {
+            return new Promise((resolve) => {
+                const img = new Image();
+                img.src = images[image];
+                img.onload = () => resolve(img);
+            });
+        };
+
+        const loadImages = async () => {
+            let imagesToLoad = [];
+            if (selectedOption1) {
+                imagesToLoad = imagesToLoad.concat(imageMap[selectedOption1]);
+            }
+            if (selectedOption2) {
+                imagesToLoad = imagesToLoad.concat(imageMap[selectedOption2]);
+            }
+            if (showRenovations) {
+                imagesToLoad = imagesToLoad.concat(imageMap.renowacje.map(r => r.before).concat(imageMap.renowacje.map(r => r.after)));
+            }
+            const loaded = await Promise.all(imagesToLoad.map(loadImage));
+            setLoadedImages(loaded.map(img => img.src));
+        };
+
+        loadImages();
+    }, [selectedOption1, selectedOption2, showRenovations, imageMap]);
+
+    const renderImages = (imagePaths) => {
+        if (imagePaths.length === 0) {
+            return <h1 className="in_work">Prace są w toku...</h1>;
+        }
+        return imagePaths.map((image, index) => (
+            <img
+                loading="lazy"
+                key={index}
+                src={images[image]}
+                alt={`Image ${index}`}
+                className="project_img"
+                onClick={() => onImageClick(images[image])}
+            />
+        ));
+    };
+
     const getImagesForOption = (option) => {
         return imageMap[option] || [];
     };
+
     const getAllImages = (options) => {
         return options.reduce((allImages, option) => {
             return allImages.concat(imageMap[option] || []);
         }, []);
     };
-    const renderImages = (images) => {
-        if (images.length === 0) {
-            return <h1 className="in_work">Prace są w toku...</h1>;
-        }
-        return images.map((image, index) => (
-            <img
-                loading="lazy"
-                key={index}
-                src={image}
-                alt={`Image ${index}`}
-                className="project_img"
-                onClick={() => onImageClick(image)}
-
-            />
-        ));
-    };
 
     const allKamienOptions = ['parapety', 'schody', 'elewacje', 'blaty', 'mała_architektura'];
     const allInneOptions = ['beton_architektoniczny', 'beton_elewacje', 'piask_elewacje'];
 
-    const imagesToShow1 = selectedOption1 === 'montaż_kamienia*'  ? getAllImages(allKamienOptions) : getImagesForOption(selectedOption1);
-    const imagesToShow2 = selectedOption2 === 'montaż_beton*'  ? getAllImages(allInneOptions) : getImagesForOption(selectedOption2);
+    const imagesToShow1 = selectedOption1 === 'montaż_kamienia*' ? getAllImages(allKamienOptions) : getImagesForOption(selectedOption1);
+    const imagesToShow2 = selectedOption2 === 'montaż_beton*' ? getAllImages(allInneOptions) : getImagesForOption(selectedOption2);
 
     return (
         <div className="projects_imgs">
-
             {selectedOption1 !== 'montaż_kamienia' && (
-
                 <div className={`image_gallery ${selectedOption1 ? 'show' : 'hide'}`}>
                     {renderImages(imagesToShow1)}
                 </div>
@@ -117,20 +109,20 @@ const ProjectsImgs = ({ selectedOption1, selectedOption2, showRenovations, onIma
                             <div className="renovation_images">
                                 <img
                                     loading="lazy"
-                                    src={renovation.before}
+                                    src={images[renovation.before]}
                                     alt={`Renovation Before ${index}`}
                                     className="renovation_img"
-                                    onClick={() => onImageClick(renovation.before)}
-
+                                    onClick={() => onImageClick(images[renovation.before])}
                                 />
                                 <h1>Przed</h1>
                             </div>
                             <div className="renovation_images">
                                 <img
-                                    src={renovation.after}
+                                    loading="lazy"
+                                    src={images[renovation.after]}
                                     alt={`Renovation After ${index}`}
                                     className="renovation_img"
-                                    onClick={() => onImageClick(renovation.after)}
+                                    onClick={() => onImageClick(images[renovation.after])}
                                 />
                                 <h1>Po</h1>
                             </div>
@@ -143,3 +135,4 @@ const ProjectsImgs = ({ selectedOption1, selectedOption2, showRenovations, onIma
 };
 
 export default ProjectsImgs;
+
