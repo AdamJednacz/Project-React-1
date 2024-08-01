@@ -1,8 +1,14 @@
 import React, {lazy, useEffect, useState} from 'react';
 import {Link} from "react-router-dom";
-import {style} from "../../App";
+import bg from "../assets/biały_marmur.avif";
 
 const Home_Slider = lazy(() => import("../Home/Home_Slider"));
+const style = {
+    backgroundImage: `url(${bg})`,
+    backgroundSize: "cover",
+    backgroundPosition: 'center',
+    overflow: 'hidden'
+};
 
 const Home_Main = () => {
     const [isWideScreen, setIsWideScreen] = useState(window.matchMedia("(min-width: 1381px)").matches);
