@@ -12,8 +12,10 @@ main,.home_main {
 
   .container {
     @include desktop{
-      justify-content: space-between;
+
+      justify-content: space-evenly;
       max-width: 100%;
+      width: 100%;
     }
 
 
@@ -33,7 +35,7 @@ main,.home_main {
         max-width: 30%;
         padding: 2rem;
         align-items: flex-start;
-        margin-left: 7rem;
+
         margin-top: 2rem;
         margin-bottom: 2rem;
       }

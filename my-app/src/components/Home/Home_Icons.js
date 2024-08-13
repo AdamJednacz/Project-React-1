@@ -4,6 +4,7 @@ import {faShield,faStar,faCalendar} from  '@fortawesome/free-solid-svg-icons';
 const Home_Icons = () => {
     return (
         <section className="home_icons">
+            <h1 className="home_icons_title">Co zyskujesz przy współpracy z nami?</h1>
             <div className="container">
                 <div className="box">
                     <h1>Jakość Pracy</h1>

@@ -2,8 +2,17 @@
   display: flex;
   justify-content: center;
   color: #4e4e50;
+  flex-direction: column;
+  align-items: center;
   @include desktop{
-    padding: 2rem 0 4rem 0;
+    padding: 6rem 0 4rem 0 ;
+  }
+ .home_icons_title{
+    font-size: 2.5rem;
+    font-family: "Times New Roman", sans-serif;
+    font-weight: 600;
+    margin-bottom: 4rem;
+    color: #4e4e50;
   }
   .container{
     flex-direction: column;
