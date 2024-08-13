@@ -28,8 +28,8 @@ const Home_Main = () => {
     }, []);
 
     return (
-        <div className='bg' style={style}>
-            <main className="home_main">
+
+            <main className="home_main"  style={style}>
                 <div className="container" >
                     <div className="main_card">
                         <h1>Lorem Ipsum</h1>
@@ -41,7 +41,7 @@ const Home_Main = () => {
                     {isWideScreen && <Home_Slider />}
                 </div>
             </main>
-        </div>
+
     );
 };
 

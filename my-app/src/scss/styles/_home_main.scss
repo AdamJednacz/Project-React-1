@@ -3,16 +3,17 @@ main,.home_main {
   align-items: center;
   justify-content: center;
   color: #4e4e50;
-  padding: 2rem 0;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
 
   @include desktop {
     justify-content: center;
-    width: 80%;
+    width: 100%;
   }
 
   .container {
     @include desktop{
       justify-content: space-between;
+      max-width: 100%;
     }
 
 
@@ -29,9 +30,12 @@ main,.home_main {
 
       @include desktop {
         width: auto;
-        max-width: 40%;
+        max-width: 30%;
         padding: 2rem;
         align-items: flex-start;
+        margin-left: 7rem;
+        margin-top: 2rem;
+        margin-bottom: 2rem;
       }
 
       h1,h2,span {
