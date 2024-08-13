@@ -4,7 +4,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faAngleLeft, faAngleRight } from "@fortawesome/free-solid-svg-icons";
 
 const HomeOpinions = () => {
-    const [index, setIndex] = useState(0);
+    const [index, setIndex] = useState(1);
 
     const opinions = [
         {

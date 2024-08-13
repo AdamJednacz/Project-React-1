@@ -11,12 +11,7 @@ main,.home_main {
   }
 
   .container {
-    @include desktop{
 
-      justify-content: space-evenly;
-      max-width: 100%;
-      width: 100%;
-    }
 
 
     .card,.main_card {
@@ -113,3 +108,11 @@ main,.home_main {
 }
 
 
+.home_main .container{
+  @include desktop{
+
+    justify-content: space-evenly;
+    max-width: 100%;
+    width: 100%;
+  }
+}
