@@ -1,21 +1,21 @@
 import React, { useState, useEffect, useRef } from 'react';
 import img1 from "../assets/beton_elewacje_2.avif";
 import img2 from "../assets/beton_elewacje_3.avif";
-
 import img4 from "../assets/blat_łazienkowy.avif";
 import img5 from "../assets/beton_9.avif";
 import img6 from "../assets/schody_renowacja.avif";
-import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
-import {faX} from "@fortawesome/free-solid-svg-icons";
-
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faX } from "@fortawesome/free-solid-svg-icons";
 
 const images = [img1, img2, img4, img5, img6];
 
 const HomeSlider = () => {
     const [current, setCurrent] = useState(0);
-    const [animating, setAnimating] = useState(false);
+    const [fadeOut, setFadeOut] = useState(false);
+    const [fadeIn, setFadeIn] = useState(false);
     const intervalRef = useRef(null);
     const [popupImage, setPopupImage] = useState(null);
+
     useEffect(() => {
         startInterval();
         return () => clearInterval(intervalRef.current);
@@ -24,31 +24,39 @@ const HomeSlider = () => {
     const startInterval = () => {
         clearInterval(intervalRef.current);
         intervalRef.current = setInterval(() => {
-            nextSlide();
+            handleNextSlide();
         }, 6000);
     };
 
-    const nextSlide = () => {
-        if (animating) return;
-        setAnimating(true);
-        setCurrent((prev) => (prev === images.length - 1 ? 0 : prev + 1));
-    };
+    const handleNextSlide = () => {
+        setFadeOut(true);
 
-    const prevSlide = () => {
-        if (animating) return;
-        setAnimating(true);
-        setCurrent((prev) => (prev === 0 ? images.length - 1 : prev - 1));
+        setTimeout(() => {
+            setCurrent((prev) => (prev === images.length - 1 ? 0 : prev + 1));
+            setFadeOut(false);
+            setFadeIn(true);
+
+            setTimeout(() => {
+                setFadeIn(false);
+            }, 1500);
+        }, 1500);
     };
 
     const handleDotClick = (index) => {
-        if (animating || index === current) return;
-        setAnimating(true);
-        setCurrent(index);
-        startInterval(); // resetowanie interwału po kliknięciu kropki
-    };
+        clearInterval(intervalRef.current); // Stop auto-slide when user interacts
+        setFadeOut(true);
 
-    const handleAnimationEnd = () => {
-        setAnimating(false);
+        setTimeout(() => {
+            setCurrent(index);
+            setFadeOut(false);
+            setFadeIn(true);
+
+            setTimeout(() => {
+                setFadeIn(false);
+            }, 1500);
+
+            startInterval(); // Restart auto-slide after user interaction
+        }, 1500);
     };
 
     const handleImageClick = (image) => {
@@ -58,15 +66,15 @@ const HomeSlider = () => {
     const handleClosePopup = () => {
         setPopupImage(null);
     };
+
     return (
         <section className="slider">
             <div className="slider-images">
                 <img
                     src={images[current]}
                     alt={`img-${current}`}
-                    className={`slider-image ${animating ? 'fade-in' : ''}`}
-                    onAnimationEnd={handleAnimationEnd}
-                    onClick={() => handleImageClick(images[current])} // Pass the correct image source
+                    className={`slider-image ${fadeOut ? 'fade-out' : fadeIn ? 'fade-in' : ''}`}
+                    onClick={() => handleImageClick(images[current])}
                 />
             </div>
             <div className="slider-dots">

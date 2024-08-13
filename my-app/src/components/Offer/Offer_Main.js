@@ -44,7 +44,7 @@ const OfferMain = () => {
                                 onClick={() => toggleList('montaz')}>
                             {expandedListId === 'montaz' ? 'Ukryj Ofertę' : 'Zobacz Ofertę'}
                         </button>
-                        <button className="btn_offer_desktop" onClick={()=>handleLinkClick("Montaż Kamienia")}>Zobacz Realizacje Montażu Kamienia</button>
+                        <button className="btn_offer_desktop" onClick={()=>handleLinkClick("Montaż Kamienia")}>Zobacz Montaż Kamienia</button>
 
                     </div>
                     <ul className={`offer-list ${expandedListId === 'montaz' ? 'visible' : 'invisible'}`}>
@@ -88,7 +88,7 @@ const OfferMain = () => {
                                 onClick={() => toggleList('inne')}>
                             {expandedListId === 'inne' ? 'Ukryj Ofertę' : 'Zobacz Ofertę'}
                         </button>
-                        <button className="btn_offer_desktop" onClick={()=>handleLinkClick("Montaż Betonu")}>Zobacz Realizacje Montażu Betonu</button>
+                        <button className="btn_offer_desktop" onClick={()=>handleLinkClick("Montaż Betonu")}>Zobacz Montaż Betonu</button>
                     </div>
                     <ul className={`offer-list ${expandedListId === 'inne' ? 'visible' : 'invisible'}`}>
                         <li>Montaż betonu architektonicznego</li>
