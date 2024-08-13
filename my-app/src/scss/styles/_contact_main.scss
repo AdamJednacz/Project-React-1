@@ -7,17 +7,17 @@
   .container{
     flex-direction: column;
     @include desktop{
+      margin: 2rem 0;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      flex-direction: row;
+      justify-content: space-around;
 
     }
-    .contact_info{
-      @include desktop{
-        margin: 2rem 0;
-        width: 100%;
-        display: flex;
-        align-items: center;
-        flex-direction: row-reverse;
-        justify-content: space-around;
-      }
+
+
+
       .card{
         width: 100%;
         box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
@@ -100,5 +100,4 @@
 
   }
 
-}
 

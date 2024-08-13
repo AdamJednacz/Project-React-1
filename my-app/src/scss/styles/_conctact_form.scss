@@ -6,6 +6,7 @@ form{
   @include desktop{
     width: 30%;
     align-items: flex-start;
+
   }
   h1{
     font-size: 1.5rem;
@@ -38,12 +39,19 @@ form{
     display: flex;
     align-items: flex-start;
     justify-content: center;
+    @include desktop{
+      justify-content: flex-start;
+    }
     input[type="checkbox"]{
       width: auto;
     }
     p{
       margin: 0.5rem;
       font-size: 0.6rem;
+      @include desktop{
+        max-width: 60%;
+      }
+
     }
   }
 
