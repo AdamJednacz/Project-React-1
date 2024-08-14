@@ -3,102 +3,113 @@
   align-items: center;
   justify-content: center;
   padding: 2rem 0;
-
   color: #4e4e50;
-  .container{
+  .container {
     flex-direction: column;
-    @include desktop{
+    @include desktop {
       margin: 2rem 0;
       width: 100%;
       display: flex;
       align-items: center;
       flex-direction: row;
-      justify-content: space-around;
-
+      justify-content: center;
     }
 
-
-
-      .card{
+    .hand_phone {
+      display: flex;
+      position: relative;
+      align-items: center;
+      height: 23.5rem;
+      width:200px;
+      @include desktop {
+        scale: 1.1;
+        height: 35rem;
+        width:480px;
+      }
+      
+      .card {
         width: 100%;
-        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+        scale: 0.8;
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
         margin: 2rem 0;
         padding-bottom: 1rem;
-        @include desktop{
-          width: 20%;
+        @include desktop {
+          width: 40%;
+          position: absolute;
+          left: 48%;
+          bottom: 20%;
         }
-        img{
-          width: 100%;
-          @include desktop{
+        img {
+          width: 90%;
+          margin-bottom: 1rem;
+          box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+          @include desktop {
+            width: 100%;
             margin-bottom: 1rem;
           }
         }
-        p{
-        text-align: left;
-        margin: 0.5rem 0;
+        p {
+          text-align: left;
+          margin: 0.5rem 0;
           line-height: 18px;
           white-space: nowrap;
-          font-size: 0.9rem;
-          @include desktop{
-
-            margin: 1rem 0;
-          }
-          &:first-of-type{
+          font-size: 1rem;
+          &:first-of-type {
             margin-top: 1.5rem;
           }
         }
-
-        .contact_number{
-
+        .contact_number {
           color: #4e4e50;
-
         }
-        span{
+
+        span {
           font-weight: bold;
           text-decoration: none;
-
         }
-        .facebook{
+        .name{
+          font-size: 1.2rem;
+        }
+
+        .facebook {
           display: flex;
           justify-content: center;
           align-items: center;
           font-size: 1.5rem;
           align-self: center;
-          padding: 0.5rem 1rem;
+          padding: 0.5rem 2rem;
           cursor: pointer;
           border-radius: 10px;
           width: 60%;
           height: 2.5rem;
           background-color: #3b5998;
-          margin: 1rem 0;
+          margin: 3rem 0 0 0;
           box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15);
           transition: 0.7s all ease-in-out;
-          @include desktop{
+          @include desktop {
             height: 2.5rem;
             width: auto;
             padding: 0.5rem 1rem;
-            &:hover{
+            &:hover {
               background-color: #ffffff;
               color: #3b5998;
             }
           }
         }
-        .icon{
+
+        .icon {
           color: #ffffff;
           text-decoration: none;
           font-weight: 600;
-        .fb{
-          margin-right: 1rem;
-        }
+
+          .fb {
+            margin-right: 1rem;
+          }
         }
       }
 
     }
-
   }
-
-
+}

@@ -32,7 +32,7 @@
       align-items: center;
       justify-content: center;
       flex-direction: column;
-      border:solid 1rem      #dea31b;
+      border:solid 0.5rem #dea31b;
       width: 50vw;
       padding: 2rem;
       margin: 1rem;
@@ -57,14 +57,14 @@
         }
       }
       .icon{
-        font-size: 3rem;
+        width: 80px;
+        height: 80px;
         margin: 1.5rem 0;
         @include desktop{
           margin: 2.5rem 0;
-          font-size: 3.5rem;
-          &:hover{
+          width: 100px;
+          height: 100px;
 
-          }
         }
       }
       p{

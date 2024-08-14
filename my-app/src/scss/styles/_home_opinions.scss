@@ -89,6 +89,7 @@
               object-fit: cover;
               border-radius: 50%;
               margin-bottom: 0.5rem;
+              box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
               @include desktop{
                 margin-bottom: 1rem;
               }

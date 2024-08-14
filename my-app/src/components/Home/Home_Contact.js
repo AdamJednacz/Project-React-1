@@ -1,5 +1,5 @@
 import React from 'react';
-import img1 from '../assets/telefon2.avif';
+import img1 from '../assets/telefon.avif';
 import { useNavigate } from 'react-router-dom';
 
 const HomeContact = () => {

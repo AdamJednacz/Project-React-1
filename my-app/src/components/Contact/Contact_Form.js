@@ -56,7 +56,6 @@ const HomeForm = () => {
                 type="number"
                 name="number"
                 required={true}
-            
                 onChange={handlePhoneNumberChange}
                 placeholder="+48 123 123 123"
             />
