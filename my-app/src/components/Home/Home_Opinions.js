@@ -49,8 +49,11 @@ const HomeOpinions = () => {
                         style={{ transform: `translateX(-${index * 100}%)` }}
                     >
 
-                        {opinions.map((opinion) => (
-                            <div key={opinion.id} className="opinion">
+                        {opinions.map((opinion, i) => (
+                            <div
+                                key={opinion.id}
+                                className={`opinion ${i === index ? 'active' : ''}`}
+                            >
                                 <div className="opinion_title">
                                     <img src={logo} alt="logo" />
                                     <h2>{opinion.company}</h2>
