@@ -6,6 +6,7 @@ const HomeForm = () => {
     const [submitted, setSubmitted] = useState(false);
     const [emailError, setEmailError] = useState(false);
     const [messageError, setMessageError] = useState(false);
+    const [phoneNumber, setPhoneNumber] = useState("");
     const form = useRef();
 
     const sendEmail = (e) => {
@@ -37,6 +38,13 @@ const HomeForm = () => {
                 });
         }
     };
+    const handlePhoneNumberChange = (e) => {
+        const input = e.target.value;
+        // Allow only numbers and limit to 9 digits
+        if (input.length <= 9) {
+            setPhoneNumber(input);
+        }
+    };
     return (
         <form ref={form} onSubmit={sendEmail}>
 
@@ -44,7 +52,14 @@ const HomeForm = () => {
             <input type="text" name="name" required={true} placeholder="Imię"/>
             <input type="text" name="surname" required={true}  placeholder="Nazwisko"/>
             <input type="email" name="email"  required={true} placeholder="E-mail"/>
-            <input type="number" name="number" required={true} placeholder="+48 123 123 123"/>
+            <input
+                type="number"
+                name="number"
+                required={true}
+            
+                onChange={handlePhoneNumberChange}
+                placeholder="+48 123 123 123"
+            />
             <textarea rows="6" name="message" required={true} placeholder="Wiadomość..."/>
             <div className="checkbox_container">
                 <input type="checkbox" required={true}/>
