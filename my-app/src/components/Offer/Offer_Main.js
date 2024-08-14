@@ -7,6 +7,10 @@ import {useNavigate} from "react-router-dom";
 
 const OfferMain = () => {
 
+
+
+
+
     const [expandedListId, setExpandedListId] = useState(null);
 
     const navigate = useNavigate();
@@ -17,6 +21,16 @@ const OfferMain = () => {
         'Montaż Kamienia': 'montaż_kamienia*',
         'Renowacje': 'renowacje',
         'Montaż Betonu': 'montaż_beton*',
+        'Blaty': 'blaty',
+        'Elewacje': 'elewacje',
+        'Mała architektura': 'mała_architektura',
+        'Parapety': 'parapety',
+        'Schody': 'schody',
+        'Beton Architektoniczny':'beton_architektoniczny',
+        'Gresy':'gresy',
+        'Spieki Wieloformatowe':'spieki_wieloformatowe',
+
+
 
     };
     const handleLinkClick = (title) => {
@@ -48,11 +62,11 @@ const OfferMain = () => {
 
                     </div>
                     <ul className={`offer-list ${expandedListId === 'montaz' ? 'visible' : 'invisible'}`}>
-                        <li>Montaż Blatów</li>
-                        <li>Montaż Elewacji</li>
-                        <li>Montaż Małej Architektury</li>
-                        <li>Montaż Parapetów</li>
-                        <li>Montaż Schodów</li>
+                        <li onClick={()=>handleLinkClick("Blaty")}>Montaż Blatów</li>
+                        <li onClick={()=>handleLinkClick("Elewacje")}>Montaż Elewacji</li>
+                        <li onClick={()=>handleLinkClick("Mała architektura")}>Montaż Małej Architektury</li>
+                        <li onClick={()=>handleLinkClick("Parapety")}>Montaż Parapetów</li>
+                        <li onClick={()=>handleLinkClick("Schody")}>Montaż Schodów</li>
                     </ul>
                 </div>
                 <div className="offer_card">
@@ -70,10 +84,10 @@ const OfferMain = () => {
                         <button className="btn_offer_desktop" onClick={()=>handleLinkClick("Renowacje")}>Zobacz Realizacje Renowacji</button>
                     </div>
                     <ul className={`offer-list ${expandedListId === 'renowacje' ? 'visible' : 'invisible'}`}>
-                        <li>Posadzki z Lastriko</li>
-                        <li>Schody z Lastriko</li>
-                        <li>Schody kamienne</li>
-                        <li>Posadzki kamienne</li>
+                        <li onClick={()=>handleLinkClick("Renowacje")}>Posadzki z Lastriko</li>
+                        <li onClick={()=>handleLinkClick("Renowacje")}>Schody z Lastriko</li>
+                        <li onClick={()=>handleLinkClick("Renowacje")}>Schody kamienne</li>
+                        <li onClick={()=>handleLinkClick("Renowacje")}>Posadzki kamienne</li>
                     </ul>
                 </div>
                 <div className="offer_card">
@@ -91,9 +105,9 @@ const OfferMain = () => {
                         <button className="btn_offer_desktop" onClick={()=>handleLinkClick("Montaż Betonu")}>Zobacz Montaż Betonu</button>
                     </div>
                     <ul className={`offer-list ${expandedListId === 'inne' ? 'visible' : 'invisible'}`}>
-                        <li>Montaż betonu architektonicznego</li>
-                        <li>Montaż gresów</li>
-                        <li>Montaż spieków wieloformatowych</li>
+                        <li onClick={()=>handleLinkClick("Beton Architektoniczny")}>Montaż betonu architektonicznego</li>
+                        <li onClick={()=>handleLinkClick("Gresy")}>Montaż gresów</li>
+                        <li onClick={()=>handleLinkClick("Spieki Wieloformatowe")}>Montaż spieków wieloformatowych</li>
                     </ul>
                 </div>
             </div>

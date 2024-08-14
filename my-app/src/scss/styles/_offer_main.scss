@@ -104,13 +104,15 @@
 
           }
         li {
-
+          cursor: pointer;
           font-size: 0.9rem;
           list-style: inside;
           margin-bottom: 0.5rem;
           margin-left: 1rem;
           font-weight: 600;
-
+          &:hover{
+            text-decoration: underline;
+          }
         }
       }
     }
