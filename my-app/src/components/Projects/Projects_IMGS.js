@@ -1,9 +1,11 @@
 import React, { useState, useEffect, useMemo } from 'react';
+import { LazyLoadImage } from 'react-lazy-load-image-component';
+import 'react-lazy-load-image-component/src/effects/blur.css'; // Import the blur effect
 
 // Dynamic import of images
 const importImages = (r) => {
     let images = {};
-    r.keys().map((item, index) => { images[item.replace('./', '')] = r(item); });
+    r.keys().map((item) => { images[item.replace('./', '')] = r(item); });
     return images;
 };
 
@@ -61,13 +63,13 @@ const ProjectsImgs = ({ selectedOption1, selectedOption2, showRenovations, onIma
             return <h1 className="in_work">Prace są w toku...</h1>;
         }
         return imagePaths.map((image, index) => (
-            <img
-                loading="lazy"
+            <LazyLoadImage
                 key={index}
                 src={images[image]}
                 alt={`Image ${index}`}
                 className="project_img"
                 onClick={() => onImageClick(images[image])}
+                effect="blur"
             />
         ));
     };
@@ -107,22 +109,22 @@ const ProjectsImgs = ({ selectedOption1, selectedOption2, showRenovations, onIma
                     {imageMap.renowacje.map((renovation, index) => (
                         <div key={index} className="renovation_images_container">
                             <div className="renovation_images">
-                                <img
-                                    loading="lazy"
+                                <LazyLoadImage
                                     src={images[renovation.before]}
                                     alt={`Renovation Before ${index}`}
                                     className="renovation_img"
                                     onClick={() => onImageClick(images[renovation.before])}
+                                    effect="blur"
                                 />
                                 <h1>Przed</h1>
                             </div>
                             <div className="renovation_images">
-                                <img
-                                    loading="lazy"
+                                <LazyLoadImage
                                     src={images[renovation.after]}
                                     alt={`Renovation After ${index}`}
                                     className="renovation_img"
                                     onClick={() => onImageClick(images[renovation.after])}
+                                    effect="blur"
                                 />
                                 <h1>Po</h1>
                             </div>
@@ -135,4 +137,3 @@ const ProjectsImgs = ({ selectedOption1, selectedOption2, showRenovations, onIma
 };
 
 export default ProjectsImgs;
-
